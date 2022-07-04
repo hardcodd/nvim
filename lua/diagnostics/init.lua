@@ -15,7 +15,7 @@ return {
 	float = {
 		focusable = true,
 		style = "minimal",
-		border = require("plenary.window.border"),
+		border = "rounded",
 		source = "always",
 		header = "",
 		prefix = "",
