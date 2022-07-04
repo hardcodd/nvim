@@ -13,6 +13,7 @@ local servers = {
 	"sumneko_lua",
 	"eslint",
 	"vuels",
+	"jsonls",
 }
 
 local diagnostics = require("diagnostics")
