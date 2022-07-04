@@ -1,4 +1,4 @@
 require("vim")
-require("vim.autocmd")
 require("plugins")
+require("vim.autocmd")
 require("vim.keymaps")
