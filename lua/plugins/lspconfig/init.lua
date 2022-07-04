@@ -85,8 +85,8 @@ for _, server in ipairs(servers) do
 		})
 	else
 		lspconfig[server].setup({
-			handlers = handlers,
 			capabilities = capabilities,
+			handlers = handlers,
 			on_attach = on_attach,
 		})
 	end

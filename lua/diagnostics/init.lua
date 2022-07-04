@@ -13,19 +13,11 @@ return {
 	underline = true,
 	severity_sort = true,
 	float = {
-		focusable = false,
+		focusable = true,
 		style = "minimal",
-		border = "rounded",
+		border = require("plenary.window.border"),
 		source = "always",
 		header = "",
 		prefix = "",
-		format = function(d)
-			local t = vim.deepcopy(d)
-			local code = d.code or (d.user_data and d.user_data.lsp.code)
-			if code then
-				t.message = string.format("%s [%s]", t.message, code):gsub("1. ", "")
-			end
-			return t.message
-		end,
 	},
 }

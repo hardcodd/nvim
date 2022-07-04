@@ -11,6 +11,7 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<a-k>"] = cmp.mapping.scroll_docs(-4),
 		["<a-j>"] = cmp.mapping.scroll_docs(4),
+		---@diagnostic disable-next-line: missing-parameter
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,

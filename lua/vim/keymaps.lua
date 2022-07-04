@@ -20,8 +20,8 @@ map("i", "<c-k>", "<Up>", opts)
 map("i", "<c-l>", "<Right>", opts)
 
 -- Buffers
-map("n", "<Tab>", ":bnext<cr>", opts) -- next
-map("n", "<S-Tab>", ":bprevious<cr>", opts) -- previous
+map("n", "<Tab>", ":BufferLineCycleNext<cr>", opts) -- next
+map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", opts) -- previous
 map("n", "<leader>x", ":bdelete<cr>", opts) -- close
 map("n", "<leader>w", ":w<cr>", opts) -- write
 
