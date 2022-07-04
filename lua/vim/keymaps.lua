@@ -58,7 +58,7 @@ map("n", "fb", ":Telescope file_browser default_selection_index=2<cr>", opts)
 map("n", "fh", ":Telescope help_tags<cr>", opts)
 
 -- Diagnostics
-map("n", "<space>e", ":lua vim.diagnostic.open_float()<cr>", opts)
-map("n", "[d", ":lua vim.diagnostic.goto_prev()<cr>", opts)
-map("n", "]d", ":lua vim.diagnostic.goto_next()<cr>()", opts)
-map("n", "<space><space>q", ":lua vim.diagnostic.setloclist()<cr>", opts)
+map("n", "dl", ":lua vim.diagnostic.open_float()<cr>", opts)
+map("n", "dp", ":lua vim.diagnostic.goto_prev()<cr>", opts)
+map("n", "dn", ":lua vim.diagnostic.goto_next()<cr>()", opts)
+map("n", "ds", ":lua vim.diagnostic.setloclist()<cr>", opts)
