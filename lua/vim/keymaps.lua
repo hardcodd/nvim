@@ -54,7 +54,7 @@ map("v", "<a-j>", ":m '>+1<CR>gv-gv", opts) -- move down
 map("n", "ff", ":Telescope find_files<cr>", opts)
 map("n", "fw", ":Telescope grep_string<cr>", opts)
 map("n", "fg", ":Telescope live_grep<cr>", opts)
-map("n", "fb", ":Telescope buffers<cr>", opts)
+map("n", "fb", ":Telescope file_browser default_selection_index=2<cr>", opts)
 map("n", "fh", ":Telescope help_tags<cr>", opts)
 
 -- Diagnostics

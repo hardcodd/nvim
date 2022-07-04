@@ -40,6 +40,7 @@ return require("packer").startup({
 			events = on_file_open,
 		})
 
+		-- Lualine
 		use({
 			"nvim-lualine/lualine.nvim",
 			after = "onenord.nvim",
@@ -110,6 +111,9 @@ return require("packer").startup({
 
 		-- Telescope fzf-native
 		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+
+		-- Telescope filebrowser
+		use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 		-- Autopairs
 		use({ "windwp/nvim-autopairs", events = on_file_open, config = "require('plugins.autopairs')" })
