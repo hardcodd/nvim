@@ -80,3 +80,6 @@ au!
 autocmd BufNew,BufNewFile,BufRead *.html :set filetype=html
 augroup END
 ]])
+
+-- Python indentation settings
+cmd("autocmd FileType python setlocal tabstop=4 shiftwidth=4 smarttab expandtab")
