@@ -103,9 +103,6 @@ return require("packer").startup({
 			end,
 		})
 
-		-- Colorizer
-		use({ "norcalli/nvim-colorizer.lua", config = "require('plugins.colorizer')" })
-
 		-- Telescope
 		use({ "nvim-telescope/telescope.nvim", config = "require('plugins.telescope')" })
 
