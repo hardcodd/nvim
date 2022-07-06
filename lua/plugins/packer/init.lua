@@ -91,6 +91,14 @@ return require("packer").startup({
 		-- TS Autotag
 		use({ "windwp/nvim-ts-autotag", events = on_file_open, after = "nvim-treesitter" })
 
+		-- Comment
+		use({
+			"numToStr/Comment.nvim",
+			events = on_file_open,
+			after = "nvim-ts-context-commentstring",
+			config = "require('plugins.comment')",
+		})
+
 		-- Twilight
 		use({ "folke/twilight.nvim", after = "nvim-treesitter", config = "require('plugins.twilight')" })
 
@@ -100,15 +108,6 @@ return require("packer").startup({
 			branch = "v1", -- optional but strongly recommended
 			config = function()
 				require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
-			end,
-		})
-
-		-- Comment
-		use({
-			"numToStr/Comment.nvim",
-			events = on_file_open,
-			config = function()
-				require("Comment").setup()
 			end,
 		})
 
