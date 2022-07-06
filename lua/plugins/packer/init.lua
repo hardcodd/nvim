@@ -94,6 +94,15 @@ return require("packer").startup({
 		-- Twilight
 		use({ "folke/twilight.nvim", after = "nvim-treesitter", config = "require('plugins.twilight')" })
 
+		-- Hop (like easymotion)
+		use({
+			"phaazon/hop.nvim",
+			branch = "v1", -- optional but strongly recommended
+			config = function()
+				require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+			end,
+		})
+
 		-- Comment
 		use({
 			"numToStr/Comment.nvim",
