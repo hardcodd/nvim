@@ -13,6 +13,10 @@ map("n", "<leader>z", ":noh<cr>", opts)
 -- Source current file
 map("n", "<leader><leader>s", ":source %<cr>", { noremap = true, silent = false })
 
+-- Folding
+map("n", "<leader>f", ":fold<cr>", opts)
+map("v", "<leader>f", ":fold<cr>", opts)
+
 -- Move cursor with ctrl in insert mode
 map("i", "<c-h>", "<Left>", opts)
 map("i", "<c-j>", "<Down>", opts)
