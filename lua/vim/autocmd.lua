@@ -38,9 +38,9 @@ cmd("autocmd FileType typescript map <buffer> <C-r> :w<cr>:exec '!npx ts-node' s
 cmd("autocmd FileType typescript imap <buffer> <C-r> <esc>:w<CR>:exec '!npx ts-node' shellescape(@%, 1)<cr>")
 
 -- Set html fyletype for htmldjango files
-cmd([[
-augroup htmldjang_ft
-au!
-autocmd BufNew,BufNewFile,BufRead *.html :set filetype=html
-augroup END
-]])
+-- cmd([[
+-- augroup htmldjang_ft
+-- au!
+-- autocmd BufNew,BufNewFile,BufRead *.html :set filetype=html
+-- augroup END
+-- ]])
