@@ -1,33 +1,77 @@
-vim.o.background = "light"
+vim.g.material_style = "lighter" -- darker | lighter | oceanic | palenight | deep ocean
 
-require("onenord").setup({
-	-- theme = "light", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
-	borders = true, -- Split window borders
-	fade_nc = true, -- Fade non-current windows, making them more distinguishable
-	-- Style that is applied to various groups: see `highlight-args` for options
-	styles = {
-		comments = "NONE",
-		strings = "NONE",
-		keywords = "NONE",
-		functions = "NONE",
-		variables = "NONE",
-		diagnostics = "underline",
+require("material").setup({
+
+	contrast = {
+		sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+		floating_windows = false, -- Enable contrast for floating windows
+		line_numbers = false, -- Enable contrast background for line numbers
+		sign_column = false, -- Enable contrast background for the sign column
+		cursor_line = false, -- Enable darker background for the cursor line
+		non_current_windows = false, -- Enable darker background for non-current windows
+		popup_menu = false, -- Enable lighter background for the popup menu
 	},
+
+	italics = {
+		comments = true, -- Enable italic comments
+		keywords = true, -- Enable italic keywords
+		functions = false, -- Enable italic functions
+		strings = true, -- Enable italic strings
+		variables = false, -- Enable italic variables
+	},
+
+	contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
+		-- "terminal", -- Darker terminal background
+		"packer", -- Darker packer background
+		-- "qf", -- Darker qf list background
+	},
+
+	high_visibility = {
+		lighter = false, -- Enable higher contrast text for lighter style
+		darker = false, -- Enable higher contrast text for darker style
+	},
+
 	disable = {
-		background = false, -- Disable setting the background color
-		cursorline = false, -- Disable the cursorline
-		eob_lines = true, -- Hide the end-of-buffer lines
+		colored_cursor = true, -- Disable the colored cursor
+		borders = false, -- Disable borders between verticaly split windows
+		background = false, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
+		term_colors = false, -- Prevent the theme from setting terminal colors
+		eob_lines = false, -- Hide the end-of-buffer lines
 	},
-	-- Inverse highlight for different groups
-	inverse = {
-		match_paren = false,
+
+	lualine_style = "default", -- Lualine style ( can be 'stealth' or 'default' )
+
+	async_loading = false, -- Load parts of the theme asyncronously for faster startup (turned on by default)
+
+	custom_highlights = {}, -- Overwrite highlights with your own
+
+	plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
+		-- trouble = true,
+		nvim_cmp = true,
+		-- neogit = true,
+		gitsigns = true,
+		-- git_gutter = true,
+		telescope = true,
+		-- nvim_tree = true,
+		-- sidebar_nvim = true,
+		-- lsp_saga = true,
+		-- nvim_dap = true,
+		-- nvim_navic = true,
+		-- which_key = true,
+		-- sneak = true,
+		hop = true,
+		indent_blankline = true,
+		-- nvim_illuminate = true,
+		-- mini = true,
 	},
-	custom_highlights = {}, -- Overwrite default highlight groups
-	custom_colors = {}, -- Overwrite default colors
 })
 
-if vim.o.background == "light" then
+vim.cmd("colorscheme material")
+
+if vim.g.material_style == "lighter" then
 	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#eaebed")
+	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#888888")
 else
 	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#3b4252")
+	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#aaaaaa")
 end
