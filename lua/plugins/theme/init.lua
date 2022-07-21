@@ -1,4 +1,4 @@
-vim.g.material_style = "palenight" -- darker | lighter | oceanic | palenight | deep ocean
+vim.g.material_style = "darker" -- darker | lighter | oceanic | palenight | deep ocean
 
 require("material").setup({
 
@@ -7,7 +7,7 @@ require("material").setup({
 		floating_windows = false, -- Enable contrast for floating windows
 		line_numbers = false, -- Enable contrast background for line numbers
 		sign_column = false, -- Enable contrast background for the sign column
-		cursor_line = false, -- Enable darker background for the cursor line
+		cursor_line = true, -- Enable darker background for the cursor line
 		non_current_windows = false, -- Enable darker background for non-current windows
 		popup_menu = false, -- Enable lighter background for the popup menu
 	},
@@ -34,7 +34,7 @@ require("material").setup({
 	disable = {
 		colored_cursor = true, -- Disable the colored cursor
 		borders = false, -- Disable borders between verticaly split windows
-		background = false, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
+		background = true, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
 		term_colors = false, -- Prevent the theme from setting terminal colors
 		eob_lines = false, -- Hide the end-of-buffer lines
 	},
@@ -68,10 +68,10 @@ require("material").setup({
 
 vim.cmd("colorscheme material")
 
-if vim.g.material_style == "lighter" then
-	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#eaebed")
-	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#888888")
-else
-	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#3b4252")
-	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#aaaaaa")
-end
+-- if vim.g.material_style == "lighter" then
+-- 	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#eaebed")
+-- 	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#888888")
+-- else
+-- 	vim.cmd("autocmd BufRead * highlight CursorLineNr guibg=#3b4252")
+-- 	vim.cmd("autocmd BufRead * highlight CursorLineNr guifg=#aaaaaa")
+-- end

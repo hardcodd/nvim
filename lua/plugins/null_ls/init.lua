@@ -8,7 +8,7 @@ null_ls.setup({
 		null_ls.builtins.code_actions.gitsigns,
 
 		diagnostics.flake8,
-		diagnostics.pydocstyle,
+		-- diagnostics.pydocstyle,
 		formatting.autopep8,
 		formatting.isort,
 

@@ -13,7 +13,7 @@ o.relativenumber = true
 
 -- Cursor
 o.cursorline = true
-o.cursorlineopt = "number"
+-- o.cursorlineopt = "number"
 
 -- Global statusline
 o.laststatus = 3

@@ -44,7 +44,7 @@ require("telescope").setup({
 			},
 		},
 		file_ignore_patterns = {
-			"^.git/*",
+			".git/*",
 			"plugin/packer_compiled.lua",
 			"__pycache__",
 			"cache/*",
