@@ -29,13 +29,13 @@ return require("packer").startup({
 		use({ "nvim-lua/popup.nvim", "nvim-lua/plenary.nvim" })
 
 		-- Theme
-		use({ "marko-cerovac/material.nvim", config = "require('plugins.theme')" })
+		use({ "olimorris/onedarkpro.nvim", config = "require('plugins.theme')" })
 
 		-- Bufferline
 		use({
 			"akinsho/bufferline.nvim",
 			tag = "v2.*",
-			after = "material.nvim",
+			after = "onedarkpro.nvim",
 			config = "require('plugins.bufferline')",
 			events = on_file_open,
 		})
@@ -43,7 +43,7 @@ return require("packer").startup({
 		-- Lualine
 		use({
 			"nvim-lualine/lualine.nvim",
-			after = "material.nvim",
+			after = "onedarkpro.nvim",
 			events = on_file_open,
 			config = "require('plugins.lualine')",
 		})

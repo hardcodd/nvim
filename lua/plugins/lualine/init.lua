@@ -1,7 +1,14 @@
+function theme()
+	if vim.o.background == "dark" then
+		return "onedark"
+	end
+	return "onelight"
+end
+
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "material",
+		theme = theme(),
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		disabled_filetypes = {},
