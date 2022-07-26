@@ -21,8 +21,8 @@ require("onedarkpro").setup({
 	styles = { -- Choose from "bold,italic,underline"
 		strings = "italic", -- Style that is applied to strings.
 		comments = "italic", -- Style that is applied to comments
-		keywords = "italic", -- Style that is applied to keywords
-		functions = "bold", -- Style that is applied to functions
+		keywords = "italic,bold", -- Style that is applied to keywords
+		functions = "NONE", -- Style that is applied to functions
 		variables = "NONE", -- Style that is applied to variables
 		virtual_text = "NONE", -- Style that is applied to virtual text
 	},
