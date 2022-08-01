@@ -1,0 +1,42 @@
+{
+  "Small and Up Media Query": {
+    "prefix": "smu",
+    "body": "@include sm-u {\n\t${1}\n}"
+  },
+  "Medium and Up Media Query": {
+    "prefix": "mdu",
+    "body": "@include md-u {\n\t${1}\n}"
+  },
+  "Large and Up Media Query": {
+    "prefix": "lgu",
+    "body": "@include lg-u {\n\t${1}\n}"
+  },
+  "Small only Media Query": {
+    "prefix": "sm",
+    "body": "@include sm {\n\t${1}\n}"
+  },
+  "Medium only Media Query": {
+    "prefix": "md",
+    "body": "@include md {\n\t${1}\n}"
+  },
+  "Large only Media Query": {
+    "prefix": "lg",
+    "body": "@include lg {\n\t${1}\n}"
+  },
+  "Extra Large Media Query": {
+    "prefix": "xl",
+    "body": "@include xl {\n\t${1}\n}"
+  },
+  "Large and Down Media Query": {
+    "prefix": "lgd",
+    "body": "@include lg-d {\n\t${1}\n}"
+  },
+  "Medium and Down Media Query": {
+    "prefix": "mdd",
+    "body": "@include md-d {\n\t${1}\n}"
+  },
+  "Small and Down Media Query": {
+    "prefix": "smd",
+    "body": "@include sm-d {\n\t${1}\n}"
+  }
+}

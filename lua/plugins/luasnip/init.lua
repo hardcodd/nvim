@@ -2,6 +2,11 @@ local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
+
+ls.filetype_extend("htmldjango", { "djangohtml" })
+ls.filetype_extend("htmldjango", { "html" })
+ls.filetype_extend("python", { "django" })
 
 ls.config.set_config({
 	-- This tells LuaSnip to remember to keep around the last snippet.

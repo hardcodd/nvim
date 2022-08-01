@@ -22,6 +22,7 @@ null_ls.setup({
 		-- formatting.mdformat,
 
 		formatting.prettier,
+		formatting.prettierd,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

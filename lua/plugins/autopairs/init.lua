@@ -3,7 +3,7 @@ require("nvim-autopairs").setup({
 	check_ts = true,
 	enable_check_bracket_line = true,
 	fast_wrap = {
-		map = "<a-e>",
+		map = "<M-e>",
 		chars = { "{", "[", "(", '"', "'" },
 		pattern = [=[[%'%"%)%>%]%)%}%,]]=],
 		end_key = "$",
