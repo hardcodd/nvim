@@ -7,6 +7,7 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.code_actions.gitsigns,
 
+		diagnostics.editorconfig_checker,
 		diagnostics.flake8,
 		-- diagnostics.pydocstyle,
 		formatting.autopep8,

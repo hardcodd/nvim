@@ -1,0 +1,22 @@
+{
+  "Site Header": {
+    "prefix": "hdr",
+    "body": "<header class=\"header\" id=\"header\">\n\t<div class=\"container\">\n\t\t<div class=\"header__content\">\n\t\t\t$1\n\t\t</div>\n\t</div>\n</header>"
+  },
+  "Site Footer": {
+    "prefix": "ftr",
+    "body": "<footer class=\"footer\" id=\"footer\">\n\t<div class=\"container\">\n\t\t<div class=\"footer__content\">\n\t\t\t$1\n\t\t</div>\n\t</div>\n</footer>"
+  },
+  "Sidebar": {
+    "prefix": "sdb",
+    "body": "<aside class=\"sidebar\" id=\"sidebar\">\n\t<div class=\"sidebar__content\">\n\t\t$1\n\t</div>\n</aside>"
+  },
+  "Main": {
+    "prefix": "mn",
+    "body": "<main class=\"main\" id=\"main\">\n\t$1\n</main>"
+  },
+  "Container": {
+    "prefix": "cnt",
+    "body": "<div class=\"container\">\n\t$1\n</div>"
+  }
+}
