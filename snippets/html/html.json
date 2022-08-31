@@ -1,22 +1,38 @@
 {
   "Site Header": {
-    "prefix": "hdr",
+    "prefix": "header",
     "body": "<header class=\"header\" id=\"header\">\n\t<div class=\"container\">\n\t\t<div class=\"header__content\">\n\t\t\t$1\n\t\t</div>\n\t</div>\n</header>"
   },
   "Site Footer": {
-    "prefix": "ftr",
+    "prefix": "footer",
     "body": "<footer class=\"footer\" id=\"footer\">\n\t<div class=\"container\">\n\t\t<div class=\"footer__content\">\n\t\t\t$1\n\t\t</div>\n\t</div>\n</footer>"
   },
   "Sidebar": {
-    "prefix": "sdb",
+    "prefix": "sidebar",
     "body": "<aside class=\"sidebar\" id=\"sidebar\">\n\t<div class=\"sidebar__content\">\n\t\t$1\n\t</div>\n</aside>"
   },
   "Main": {
-    "prefix": "mn",
+    "prefix": "main",
     "body": "<main class=\"main\" id=\"main\">\n\t$1\n</main>"
   },
   "Container": {
-    "prefix": "cnt",
+    "prefix": "container",
     "body": "<div class=\"container\">\n\t$1\n</div>"
+  },
+  "Locals": {
+    "prefix": "locals",
+    "body": "<script locals>\n\tmodule.exports = {\n\t\t$1\n\t}\n</script>"
+  },
+  "Each loop": {
+    "prefix": "each",
+    "body": "<each loop=\"$1\">\n\t$2\n</each>"
+  },
+  "Include": {
+    "prefix": "inc",
+    "body": "<include src=\"$1\"></include>"
+  },
+  "Div with class": {
+    "prefix": "d",
+    "body": "<div class=\"$1\">\n\t$2\n</div>"
   }
 }
