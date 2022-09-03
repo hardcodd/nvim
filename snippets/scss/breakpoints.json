@@ -11,6 +11,11 @@
     "prefix": "lgu",
     "body": "@include lg-u {\n\t${1}\n}"
   },
+  "Extra Large and Up Media Query": {
+    "prefix": "xlu",
+    "body": "@include xl-u {\n\t${1}\n}"
+  },
+
   "Small only Media Query": {
     "prefix": "sm",
     "body": "@include sm {\n\t${1}\n}"
@@ -26,6 +31,15 @@
   "Extra Large Media Query": {
     "prefix": "xl",
     "body": "@include xl {\n\t${1}\n}"
+  },
+  "Extra Extra Large Media Query": {
+    "prefix": "xxl",
+    "body": "@include xxl {\n\t${1}\n}"
+  },
+
+  "Extra Large and Down Media Query": {
+    "prefix": "xld",
+    "body": "@include xl-d {\n\t${1}\n}"
   },
   "Large and Down Media Query": {
     "prefix": "lgd",
