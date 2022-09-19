@@ -5,7 +5,9 @@ require("bufferline").setup({
 		close_command = "bdelete! %d",
 		right_mouse_command = "bdelete! %d",
 		left_mouse_command = "buffer %d",
-		indicator_icon = " ",
+		indicator = {
+			icon = " ",
+		},
 		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
