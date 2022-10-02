@@ -1,3 +1,7 @@
+local ft = require("Comment.ft")
+
+ft.set("htmldjango", "{# %s #}")
+
 require("Comment").setup({
 	pre_hook = function(ctx)
 		-- Only calculate commentstring for tsx filetypes
