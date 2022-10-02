@@ -22,7 +22,9 @@ null_ls.setup({
 		-- formatting.markdownlint,
 		-- formatting.mdformat,
 
-		formatting.prettier,
+		formatting.stylelint,
+
+		-- formatting.prettier,
 		formatting.prettierd,
 	},
 	on_attach = function(client, bufnr)
