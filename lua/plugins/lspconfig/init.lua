@@ -37,11 +37,21 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local on_attach = function(client, bufnr)
 	-- Disable default formatters
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
+	client.server_capabilities.document_formatting = false
+	client.server_capabilities.document_range_formatting = false
 
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+	local format = function()
+		vim.lsp.buf.format({
+			bufnr = bufnr,
+			---@diagnostic disable-next-line: redefined-local
+			filter = function(client)
+				return client.name == "null-ls"
+			end,
+		})
+	end
 
 	local bufopts = { noremap = true, silent = true, buffer = bufnr }
 	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
@@ -53,7 +63,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
 	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-	vim.keymap.set("n", "<space>f", vim.lsp.buf.formatting, bufopts)
+	vim.keymap.set("n", "<space>f", format, bufopts)
 end
 
 for _, server in ipairs(servers) do
