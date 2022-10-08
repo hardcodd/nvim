@@ -14,7 +14,7 @@ require("onedarkpro").setup({
 	end,
 	colors = {}, -- Override default colors by specifying colors for 'onelight' or 'onedark' themes
 	highlights = {}, -- Override default highlight groups
-	ft_highlights = {}, -- Override default highlight groups for specific filetypes
+	filetypes= {}, -- Override default highlight groups for specific filetypes
 	plugins = { -- Override which plugins highlight groups are loaded
 		-- NOTE: Plugins have been omitted for brevity - Please see the plugins section of the README
 	},
