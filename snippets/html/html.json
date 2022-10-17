@@ -34,5 +34,17 @@
   "Div with class": {
     "prefix": "d",
     "body": "<div class=\"$1\">\n\t$2\n</div>"
+  },
+  "Extends": {
+    "prefix": "ext",
+    "body": "<extends src=\"${1:base.html}\">\n\t$2\n</extends>"
+  },
+  "Block": {
+    "prefix": "block",
+    "body": "<block name=\"$1\">\n\t$2\n</block>"
+  },
+  "Lorem": {
+    "prefix": "lorem",
+    "body": "<lorem size=\"$1\"></lorem>"
   }
 }
