@@ -50,5 +50,13 @@
   "If condition": {
     "prefix": "if",
     "body": "<if condition=\"$1\"></if>"
+  },
+  "ElseIf condition": {
+    "prefix": "elif",
+    "body": "<elseif condition=\"$1\"></elseif>"
+  },
+  "Else condition": {
+    "prefix": "else",
+    "body": "<else>$1</else>"
   }
 }
