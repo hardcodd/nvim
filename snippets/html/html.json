@@ -16,8 +16,20 @@
     "body": "<main class=\"main\" id=\"main\">\n\t$1\n</main>"
   },
   "Container": {
-    "prefix": "container",
+    "prefix": "cnt",
     "body": "<div class=\"container\">\n\t$1\n</div>"
+  },
+  "Container fluid": {
+    "prefix": "cntf",
+    "body": "<div class=\"container fluid\">\n\t$1\n</div>"
+  },
+  "Container left": {
+    "prefix": "cntl",
+    "body": "<div class=\"container left\">\n\t$1\n</div>"
+  },
+  "Container right": {
+    "prefix": "cntr",
+    "body": "<div class=\"container right\">\n\t$1\n</div>"
   },
   "Locals": {
     "prefix": "locals",
