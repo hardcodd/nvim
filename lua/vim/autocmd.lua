@@ -25,6 +25,16 @@ autocmd("BufWritePre", {
   ]],
 })
 
+-- Px2Em
+autocmd("BufWritePre", {
+	pattern = "*.scss",
+	command = [[
+		let font_size = get(g:, "font_size", 16)
+		silent! %s#\vem\((\d+)[px]*\)#\=printf("%0.3fem", 1.0/font_size*submatch(1))#g
+		silent! %s#\vem\((\d+)[px]*\s*[,\/]\s*(\d+)[px]*\)#\=printf("%0.3fem", 1.0/submatch(2)*submatch(1))#g
+	]],
+})
+
 -- Run current script with python3 by CTRL+R in command and insert mode
 cmd("autocmd FileType python map <buffer> <C-r> :w<cr>:exec '!python3' shellescape(@%, 1)<cr>")
 cmd("autocmd FileType python imap <buffer> <C-r> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<cr>")

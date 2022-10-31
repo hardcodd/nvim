@@ -153,6 +153,22 @@ return require("packer").startup({
 			end,
 		})
 
+		-- Respect local config
+		use({
+			"klen/nvim-config-local",
+			config = function()
+				require("config-local").setup({
+					-- Default configuration (optional)
+					config_files = { "init.lua", "init.vim", ".vimrc.lua", ".vimrc" }, -- Config file patterns to load (lua supported)
+					hashfile = vim.fn.stdpath("data") .. "/config-local", -- Where the plugin keeps files data
+					autocommands_create = true, -- Create autocommands (VimEnter, DirectoryChanged)
+					commands_create = false, -- Create commands (ConfigSource, ConfigEdit, ConfigTrust, ConfigIgnore)
+					silent = true, -- Disable plugin messages (Config loaded/ignored)
+					lookup_parents = false, -- Lookup config files in parent directories
+				})
+			end,
+		})
+
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
