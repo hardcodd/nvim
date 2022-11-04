@@ -27,7 +27,7 @@ autocmd("BufWritePre", {
 
 -- Px2Em
 autocmd("BufWritePre", {
-	pattern = "*.{css,scss,sass,less,styl}",
+	pattern = "*.{css,scss,sass,less,styl,md,html}",
 	command = [[
 		let font_size = get(g:, "font_size", 16)
 		silent! %s#\v(r?em)\(\s*([+-]?\d*[.]*\d+)[a-z]*\s*,\s*([+-]*\d*[.]?\d+)[a-z]*\s*\)#\=printf("%0.3f%s", 1.0/str2float(submatch(3))*str2float(submatch(2)), submatch(1))#g
