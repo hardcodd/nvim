@@ -30,8 +30,12 @@ autocmd("BufWritePre", {
 	pattern = "*.{css,scss,sass,less,styl,md,html}",
 	command = [[
 		let font_size = get(g:, "font_size", 16)
-		silent! %s#\v(r?em)\(\s*([+-]?\d*[.]*\d+)[a-z]*\s*,\s*([+-]*\d*[.]?\d+)[a-z]*\s*\)#\=printf("%0.3f%s", 1.0/str2float(submatch(3))*str2float(submatch(2)), submatch(1))#g
-		silent! %s#\v(r?em)\(\s*([+-]?\d*[.]?\d+)[a-z]*\s*\)#\=printf("%0.3f%s", 1.0/font_size*str2float(submatch(2)), submatch(1))#g
+
+		silent! %s#\v(\d*\.*\d+)rpx\s*\/\s*(\d*\.*\d+)(px)?#\=printf("%0.3frem", 1.0/str2float(submatch(2))*str2float(submatch(1)))#g
+		silent! %s#\v(\d*\.*\d+)epx\s*\/\s*(\d*\.*\d+)(px)?#\=printf("%0.3fem", 1.0/str2float(submatch(2))*str2float(submatch(1)))#g
+
+		silent! %s#\v(\d*\.*\d+)rpx#\=printf("%0.3frem", 1.0/font_size*str2float(submatch(1)))#g
+		silent! %s#\v(\d*\.*\d+)epx#\=printf("%0.3fem", 1.0/font_size*str2float(submatch(1)))#g
 	]],
 })
 

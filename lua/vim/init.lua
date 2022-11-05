@@ -75,7 +75,7 @@ vim.o.shortmess = vim.o.shortmess .. "c"
 o.hidden = true
 
 -- Which wrap
--- o.whichwrap = 'b,s,<,>,[,],h,l'
+o.whichwrap = "b,s,<,>,[,],h,l"
 
 -- Pumheight
 o.pumheight = 10
