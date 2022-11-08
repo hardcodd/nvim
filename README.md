@@ -2,7 +2,7 @@
 
 This is my ultimate neovim setup
 
-> Neovim >= 0.7
+> Neovim >= 0.8
 
 **Installation**:
 
