@@ -28,8 +28,8 @@ o.mouse = "a"
 o.title = true
 
 -- Set scrolling offset
-o.scrolloff = 10
-o.sidescrolloff = 10
+o.scrolloff = 3
+o.sidescrolloff = 3
 
 -- Set vertical ruller
 o.colorcolumn = "80"
