@@ -43,6 +43,10 @@
     "prefix": "inc",
     "body": "<include src=\"$1\"></include>"
   },
+  "Scope": {
+    "prefix": "scp",
+    "body": "<scope with=\"$1\">\n\t$2\n</scope>"
+  },
   "Div with class": {
     "prefix": "d",
     "body": "<div class=\"$1\">\n\t$2\n</div>"

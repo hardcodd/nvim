@@ -25,6 +25,15 @@ autocmd("BufWritePre", {
   ]],
 })
 
+-- {{exp}} »»» {{ exp }}
+autocmd("BufWritePre", {
+	pattern = "*.{md,html}",
+	command = [[
+		silent! %s#{{\s*#{{ #g
+		silent! %s#\s*}}# }}#g
+	]],
+})
+
 -- Px2Em
 autocmd("BufWritePre", {
 	pattern = "*.{css,scss,sass,less,styl,md,html}",
