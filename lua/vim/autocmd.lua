@@ -29,8 +29,11 @@ autocmd("BufWritePre", {
 autocmd("BufWritePre", {
 	pattern = "*.{md,html}",
 	command = [[
-		silent! %s#{{\s*#{{ #g
-		silent! %s#\s*}}# }}#g
+		silent! %s#\v\{\{[\s]{2,}#{{ #g
+		silent! %s#\v[\s]{2,}\}\}# }}#g
+
+		silent! %s#\v\{\{(\w+)#\=printf("{{ %s", submatch(1))#g
+		silent! %s#\v(\w+)\}\}#\=printf("%s }}", submatch(1))#g
 	]],
 })
 
