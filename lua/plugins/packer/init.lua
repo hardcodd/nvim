@@ -77,11 +77,17 @@ return require("packer").startup({
 		use({ "nvim-treesitter/nvim-treesitter", events = on_file_open, config = "require('plugins.treesitter')" })
 
 		-- TS context commenting
-		use({ "JoosepAlviste/nvim-ts-context-commentstring", events = on_file_open })
+		use({
+			"JoosepAlviste/nvim-ts-context-commentstring",
+			events = on_file_open,
+			config = function()
+				context_commentstring = { enable = true }
+			end,
+		})
 
 		-- TS Context
 		use({
-			"lewis6991/nvim-treesitter-context",
+			"nvim-treesitter/nvim-treesitter-context",
 			events = on_file_open,
 			config = function()
 				require("treesitter-context").setup()

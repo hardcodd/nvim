@@ -1,4 +1,3 @@
-local config = require("onedarkpro.config").config
 vim.o.background = "light"
 
 require("onedarkpro").setup({
@@ -7,14 +6,14 @@ require("onedarkpro").setup({
 	-- The theme function can be overwritten with a string value for the theme
 	theme = function()
 		if vim.o.background == "dark" then
-			return config.dark_theme
+			return "onedark_vivid"
 		else
-			return config.light_theme
+			return "onelight"
 		end
 	end,
 	colors = {}, -- Override default colors by specifying colors for 'onelight' or 'onedark' themes
 	highlights = {}, -- Override default highlight groups
-	filetypes= {}, -- Override default highlight groups for specific filetypes
+	filetypes = {}, -- Override default highlight groups for specific filetypes
 	plugins = { -- Override which plugins highlight groups are loaded
 		-- NOTE: Plugins have been omitted for brevity - Please see the plugins section of the README
 	},

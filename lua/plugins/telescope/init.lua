@@ -50,6 +50,7 @@ require("telescope").setup({
 			"cache/*",
 			"node_modules/*",
 			"media/*",
+			"migrations/*",
 			"venv/*",
 			"dist/*",
 			"-- - *.png$",
