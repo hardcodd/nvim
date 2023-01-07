@@ -6,6 +6,7 @@ require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
 
 ls.filetype_extend("htmldjango", { "djangohtml" })
 ls.filetype_extend("htmldjango", { "html" })
+ls.filetype_extend("liquid", { "html" })
 ls.filetype_extend("python", { "django" })
 
 ls.config.set_config({

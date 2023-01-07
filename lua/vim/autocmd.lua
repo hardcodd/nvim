@@ -27,7 +27,7 @@ autocmd("BufWritePre", {
 
 -- {{exp}} »»» {{ exp }}
 autocmd("BufWritePre", {
-	pattern = "*.{md,html}",
+	pattern = "*.{md,html,liquid}",
 	command = [[
 		silent! %s#\v\{\{[\s]{2,}#{{ #g
 		silent! %s#\v[\s]{2,}\}\}# }}#g

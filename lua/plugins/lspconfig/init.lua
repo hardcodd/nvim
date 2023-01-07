@@ -14,6 +14,7 @@ local servers = {
 	"eslint",
 	"vuels",
 	"jsonls",
+	"theme_check",
 }
 
 local diagnostics = require("diagnostics")
