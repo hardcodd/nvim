@@ -89,6 +89,7 @@ return require("packer").startup({
 		use({
 			"nvim-treesitter/nvim-treesitter-context",
 			events = on_file_open,
+			after = "nvim-treesitter",
 			config = function()
 				require("treesitter-context").setup()
 			end,
