@@ -90,6 +90,13 @@ for _, server in ipairs(servers) do
 				},
 			},
 		})
+	elseif "theme_check" == server then
+		lspconfig[server].setup({
+			cmd = { "theme-check-language-server", "--stdio" },
+			root_dir = function(_)
+				return vim.loop.cwd()
+			end,
+		})
 	else
 		lspconfig[server].setup({
 			capabilities = capabilities,
