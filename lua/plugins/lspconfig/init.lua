@@ -10,7 +10,7 @@ local servers = {
 	"cssls",
 	"tsserver",
 	"pyright",
-	"sumneko_lua",
+	"lua_ls",
 	"eslint",
 	"vuels",
 	"jsonls",
@@ -68,29 +68,7 @@ local on_attach = function(client, bufnr)
 end
 
 for _, server in ipairs(servers) do
-	if "sumneko_lua" == server then
-		lspconfig[server].setup({
-			capabilities = capabilities,
-			handlers = handlers,
-			on_attach = on_attach,
-			settings = {
-				Lua = {
-					runtime = {
-						version = "LuaJIT",
-					},
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = {
-						library = vim.api.nvim_get_runtime_file("", true),
-					},
-					telemetry = {
-						enable = false,
-					},
-				},
-			},
-		})
-	elseif "theme_check" == server then
+	if "theme_check" == server then
 		lspconfig[server].setup({
 			cmd = { "theme-check-language-server", "--stdio" },
 			root_dir = function(_)

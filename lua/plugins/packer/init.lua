@@ -159,8 +159,6 @@ return require("packer").startup({
 				vim.cmd("let g:mkdp_auto_start = 1")
 			end,
 		})
-		-- Live server
-		use("manzeloth/live-server")
 
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins

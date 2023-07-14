@@ -16,6 +16,10 @@
     "body": "@include xl-u {\n\t${1}\n}"
   },
 
+  "Extra Small only Media Query": {
+    "prefix": "xs",
+    "body": "@include xs {\n\t${1}\n}"
+  },
   "Small only Media Query": {
     "prefix": "sm",
     "body": "@include sm {\n\t${1}\n}"

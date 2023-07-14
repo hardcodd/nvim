@@ -1,6 +1,11 @@
 local autocmd = vim.api.nvim_create_autocmd
 local cmd = vim.cmd
 
+autocmd("User", {
+	pattern = "TelescopePreviewerLoaded",
+	command = "setlocal wrap",
+})
+
 -- Don't auto commenting new lines
 autocmd("BufEnter", {
 	pattern = "*",
@@ -29,11 +34,23 @@ autocmd("BufWritePre", {
 autocmd("BufWritePre", {
 	pattern = "*.{md,html,liquid}",
 	command = [[
-		silent! %s#\v\{\{[\s]{2,}#{{ #g
-		silent! %s#\v[\s]{2,}\}\}# }}#g
+		silent! %s#\v\{\{\s{2,}#{{ #g
+		silent! %s#\v\s{2,}\}\}# }}#g
 
 		silent! %s#\v\{\{(\w+)#\=printf("{{ %s", submatch(1))#g
 		silent! %s#\v(\w+)\}\}#\=printf("%s }}", submatch(1))#g
+	]],
+})
+
+-- {%exp%} »»» {% exp %}
+autocmd("BufWritePre", {
+	pattern = "*.{md,html,liquid}",
+	command = [[
+		silent! %s#\v\{\%\s{2,}#{% #g
+		silent! %s#\v\s{2,}\%\}# %}#g
+
+		silent! %s#\v\{\%(\w+)#\=printf("{%% %s", submatch(1))#g
+		silent! %s#\v(\w+)\%\}#\=printf("%s %%}", submatch(1))#g
 	]],
 })
 
