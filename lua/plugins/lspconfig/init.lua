@@ -10,7 +10,6 @@ local servers = {
 	"cssls",
 	"tsserver",
 	"pyright",
-	"lua_ls",
 	"eslint",
 	"vuels",
 	"jsonls",
