@@ -1,6 +1,25 @@
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all"
-	ensure_installed = "all",
+	ensure_installed = {
+		"lua",
+		"vim",
+		"html",
+		"python",
+		"css",
+		"javascript",
+		"yaml",
+		"bash",
+		"dot",
+		"json",
+		"markdown",
+		"markdown_inline",
+		"scss",
+		"php",
+		"sql",
+		"typescript",
+		"vue",
+		"htmldjango",
+	},
 
 	sync_install = false, -- (only applied to `ensure_installed`)
 	-- ignore_install = { "javascript" },
