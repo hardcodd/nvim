@@ -28,7 +28,7 @@ require("nvim-treesitter.configs").setup({
 		-- disable = { "c", "rust" },
 		additional_vim_regex_highlighting = false, -- NEVER EVER SET IT TO TRUE!!!
 	},
-	context_commentstring = {
+	ts_context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
 		config = {
