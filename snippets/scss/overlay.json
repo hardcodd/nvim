@@ -1,6 +1,0 @@
-{
-  "include overlay snippet": {
-    "prefix": "overlay",
-    "body": "@include overlay($1);"
-  }
-}

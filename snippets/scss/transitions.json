@@ -1,6 +1,0 @@
-{
-  "Include transition snippet": {
-    "prefix": "its",
-    "body": "@include transition;"
-  }
-}

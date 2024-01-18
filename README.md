@@ -1,11 +1,4 @@
-# NeoVim Ultimate
+# 💤 LazyVim
 
-This is my ultimate neovim setup
-
-> Neovim >= 0.8
-
-**Installation**:
-
-```bash
-git clone https://github.com/hardcodd/nvim ~/.config/nvim
-```
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
