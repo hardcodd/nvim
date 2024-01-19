@@ -106,3 +106,6 @@ cmd("autocmd FileType javascript imap <buffer> <C-r> <esc>:w<CR>:exec '!node' sh
 -- Run current script with npx by CTRL+R in command and insert mode
 cmd("autocmd FileType typescript map <buffer> <C-r> :w<cr>:exec '!npx ts-node' shellescape(@%, 1)<cr>")
 cmd("autocmd FileType typescript imap <buffer> <C-r> <esc>:w<CR>:exec '!npx ts-node' shellescape(@%, 1)<cr>")
+
+-- Run MarkdownPreviewStop command after closing a buffer
+cmd("autocmd BufDelete *.md ++once MarkdownPreviewStop")
