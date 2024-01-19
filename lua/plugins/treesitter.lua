@@ -11,7 +11,7 @@ return {
 			sync_install = false,
 			auto_install = true,
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = { enable = true, disable = { "yaml", "python" } },
 			autotag = {
 				enable = true,
 				enable_rename = true,
