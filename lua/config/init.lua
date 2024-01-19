@@ -63,3 +63,4 @@ end
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+vim.cmd("let g:mkdp_auto_start = 1")

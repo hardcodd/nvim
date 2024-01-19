@@ -9,9 +9,10 @@ return {
 			javascript = { { "prettierd", "prettier" } },
 
 			html = { { "prettierd", "prettier" } },
-			htmldjango = { { "djlint" } },
+			-- htmldjango = { { "djlint" } },
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
+			markdown = { { "prettierd", "prettier" } },
 		},
 		format_after_save = {
 			lsp_fallback = true,
