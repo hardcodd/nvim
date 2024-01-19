@@ -1,6 +1,11 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- Increment / Decrement
+map("n", "+", "<C-a>", opts)
+map("n", "-", "<C-x>", opts)
+map("v", "+", "g<C-a>", opts)
+
 -- Undo / Redo
 map("n", "u", ":undo<cr>", opts)
 map("n", "U", ":redo<cr>", opts)
