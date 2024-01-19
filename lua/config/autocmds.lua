@@ -110,6 +110,12 @@ cmd("autocmd FileType typescript imap <buffer> <C-r> <esc>:w<CR>:exec '!npx ts-n
 -- Run MarkdownPreviewStop command after closing a buffer
 cmd("autocmd BufDelete *.md ++once MarkdownPreviewStop")
 
--- Save foldings
-cmd("autocmd BufWinLeave *.* mkview")
-cmd("autocmd BufWinEnter *.* silent loadview")
+-- Save / Load folding
+vim.api.nvim_create_autocmd({ "BufWinLeave", "BufLeave" }, {
+	pattern = { "*" },
+	command = [[silent! mkview]],
+})
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+	pattern = { "*" },
+	command = [[silent! loadview]],
+})
