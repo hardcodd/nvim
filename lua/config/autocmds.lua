@@ -109,3 +109,7 @@ cmd("autocmd FileType typescript imap <buffer> <C-r> <esc>:w<CR>:exec '!npx ts-n
 
 -- Run MarkdownPreviewStop command after closing a buffer
 cmd("autocmd BufDelete *.md ++once MarkdownPreviewStop")
+
+-- Save foldings
+cmd("autocmd BufWinLeave *.* mkview")
+cmd("autocmd BufWinEnter *.* silent loadview")

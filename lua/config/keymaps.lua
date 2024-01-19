@@ -17,8 +17,11 @@ map("n", "U", ":redo<cr>", opts)
 map("n", "<escape>", ":noh<cr>", opts)
 
 -- Folding
-map("n", "<leader>f", ":fold<cr>", opts)
-map("v", "<leader>f", ":fold<cr>", opts)
+map("v", "<leader>f", ":fold<cr>", opts) -- fold
+map("n", "<leader>f", ":fold<cr>", opts) -- fold
+map("n", "<leader>F", "zM", opts) -- fold all
+map("n", "<leader>u", "zr", opts) -- unfold
+map("n", "<leader>U", "zR", opts) -- unfold all
 
 -- Move cursor with ctrl in insert mode
 map("i", "<c-h>", "<Left>", opts)
