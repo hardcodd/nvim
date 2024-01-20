@@ -125,3 +125,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "html", "htmldjango" },
 	command = "lua require('treesitter-context').disable()",
 })
+
+-- Save buffer with prompt
+vim.cmd([[
+function! SaveBufferWithPrompt()
+    if expand('%') == ''
+        execute 'w ' . input('Save as: ')
+    else
+        write
+    endif
+endfunction
+command! WSave call SaveBufferWithPrompt()
+]])
