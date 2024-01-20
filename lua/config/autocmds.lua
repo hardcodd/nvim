@@ -119,3 +119,9 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	pattern = { "*" },
 	command = [[silent! loadview]],
 })
+
+-- Disable treesitter-context extension for some filetypes
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "html", "htmldjango" },
+	command = "lua require('treesitter-context').disable()",
+})

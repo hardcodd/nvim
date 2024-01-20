@@ -1,4 +1,12 @@
 {
+  "Image Lock": {
+    "prefix": "iml",
+    "body": "<img src=\"https://loremflickr.com/1920/1080/?lock=1\" alt=\"Image\" />"
+  },
+  "Image Random": {
+    "prefix": "imr",
+    "body": "<img src=\"https://loremflickr.com/1920/1080/?random=1\" alt=\"Image\" />"
+  },
   "Site Header": {
     "prefix": "header",
     "body": "<header class=\"header\" id=\"header\">\n\t<div class=\"container\">\n\t\t<div class=\"header__content\">\n\t\t\t$1\n\t\t</div>\n\t</div>\n</header>"
