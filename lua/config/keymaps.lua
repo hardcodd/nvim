@@ -81,3 +81,6 @@ map("n", "<leader>rn", ":IncRename", opts)
 
 -- Change working directory
 map("n", "cd", ":cd %:p:h<cr>", opts)
+
+-- Open Netrw
+map("n", "<leader>e", ":Ex<cr>", opts)
