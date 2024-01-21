@@ -84,3 +84,13 @@ map("n", "cd", ":cd %:p:h<cr>", opts)
 
 -- Open Netrw
 map("n", "<leader>e", ":e .<cr>", opts)
+
+-- Open a file via associated program
+local os_type = require("config.utils").get_os_type()
+if os_type == "macOS" then
+	map("n", "<leader>o", ":!open %<cr>", opts)
+elseif os_type == "Linux" then
+	map("n", "<leader>o", ":!xdg-open %<cr>", opts)
+elseif os_type == "Windows" then
+	map("n", "<leader>o", ":!start %<cr>", opts)
+end
