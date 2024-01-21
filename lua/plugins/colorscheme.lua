@@ -8,7 +8,7 @@ return {
 			light = "latte",
 			dark = "mocha",
 		},
-		transparent_background = true, -- disables setting the background color.
+		transparent_background = false, -- disables setting the background color.
 		term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
 		styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
 			comments = { "italic" }, -- Change the style of comments
