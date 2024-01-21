@@ -11,6 +11,15 @@ return {
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true, disable = {} },
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<C-n>", -- init node
+					node_incremental = "<C-n>", -- node
+					scope_incremental = "<C-s>", -- scope
+					node_decremental = "<C-m>", -- node
+				},
+			},
 			autotag = {
 				enable = true,
 				enable_rename = true,
