@@ -83,4 +83,4 @@ map("n", "<leader>rn", ":IncRename", opts)
 map("n", "cd", ":cd %:p:h<cr>", opts)
 
 -- Open Netrw
-map("n", "<leader>e", ":Ex<cr>", opts)
+map("n", "<leader>e", ":e .<cr>", opts)
