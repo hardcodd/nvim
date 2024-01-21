@@ -35,6 +35,8 @@ map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", opts) -- previous
 map("n", "<leader>x", ":bdelete<cr>", opts) -- close
 map("n", "<leader>w", ":WSave<cr>", opts) -- write
 map("n", "<leader>n", ":enew<cr>", opts) -- new
+map("n", "<leader>rf", ":RenameFile<cr>", opts)
+map("n", "<leader>rm", ":RemoveFile<cr>", opts)
 
 -- Windows
 map("n", "sv", ":vsplit<cr>", opts) -- split vertical

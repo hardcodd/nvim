@@ -29,8 +29,8 @@ return {
 		},
 		cmdline = {
 			format = {
-				command = { pattern = "^:", icon = "$_", lang = "vim" },
-				edit = { pattern = "^:e ", icon = "" },
+				cmdline = { kind = "cmdline", pattern = "^:", icon = "$_", lang = "vim" },
+				edit = { kind = "edit", pattern = "^:e ", icon = "" },
 				search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
 				search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
 			},

@@ -129,11 +129,47 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 -- Save buffer with prompt
 vim.cmd([[
 function! SaveBufferWithPrompt()
-    if expand('%') == ''
-        execute 'w ' . input('Save as: ')
-    else
-        write
+  if expand('%') == ''
+    let new_name = input('Save as: ', '', 'file')
+    if new_name != ''
+      exec ':w ' . new_name
+      redraw!
     endif
+  else
+    write
+  endif
 endfunction
-command! WSave call SaveBufferWithPrompt()
+command! -nargs=0 WSave call SaveBufferWithPrompt()
+]])
+
+-- Rename the file for the buffer
+vim.cmd([[
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('Moving: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm -rf ' . old_name
+    exec ':bdelete! ' . old_name
+    redraw!
+  endif
+endfunction
+command! -nargs=0 RenameFile call RenameFile()
+]])
+
+-- Remove the file and close the buffer
+vim.cmd([[
+function! RemoveFile()
+  let file_name = expand('%')
+  if file_name != '' && file_name != '.'
+    let confirm_msg = 'Are you sure you want to delete ' . file_name . '? (y/n)'
+    if confirm(confirm_msg, "&Yes\n&No", 2) == 1
+      exec ':bdelete! ' . file_name
+      exec ':silent !rm -rf ' . file_name
+      redraw!
+    endif
+  endif
+endfunction
+
+command! -nargs=0 RemoveFile call RemoveFile()
 ]])
