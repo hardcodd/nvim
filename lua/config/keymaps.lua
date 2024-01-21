@@ -77,5 +77,7 @@ map("n", "ds", ":lua vim.diagnostic.setloclist()<cr>", opts)
 map("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', opts)
 
 -- inc-rename
-map("n", "<leader>rn", ":IncRename ", opts)
-map("v", "<leader>rn", ":IncRename ", opts)
+map("n", "<leader>rn", ":IncRename", opts)
+
+-- Change working directory
+map("n", "cd", ":cd %:p:h<cr>", opts)
