@@ -27,14 +27,25 @@ return {
 		integrations = {
 			cmp = true,
 			gitsigns = true,
-			nvimtree = true,
 			treesitter = true,
 			notify = true,
-			mini = {
+			noice = true,
+			indent_blankline = { enabled = true },
+			lsp_trouble = true,
+			mason = true,
+			markdown = true,
+			mini = true,
+			telescope = true,
+			treesitter_context = true,
+			native_lsp = {
 				enabled = true,
-				indentscope_color = "",
+				underlines = {
+					errors = { "undercurl" },
+					hints = { "undercurl" },
+					warnings = { "undercurl" },
+					information = { "undercurl" },
+				},
 			},
-			-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 		},
 	},
 	config = function(_, opts)
