@@ -91,6 +91,6 @@ return {
 		require("telescope").setup(opts)
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("file_browser")
-		require("telescope").load_extension("notify")
+		-- require("telescope").load_extension("notify")
 	end,
 }

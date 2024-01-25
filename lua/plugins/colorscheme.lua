@@ -28,7 +28,7 @@ return {
 			cmp = true,
 			gitsigns = true,
 			treesitter = true,
-			notify = true,
+			notify = false,
 			noice = true,
 			indent_blankline = { enabled = true },
 			lsp_trouble = true,
