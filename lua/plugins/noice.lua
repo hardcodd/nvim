@@ -55,6 +55,10 @@ return {
 				},
 				view = "mini",
 			},
+			{
+				filter = { event = "msg_showmode" },
+				view = "notify",
+			},
 		},
 	},
 }
