@@ -3,8 +3,6 @@ return {
 	dependencies = { "windwp/nvim-ts-autotag", "nvim-treesitter/nvim-treesitter-context" },
 	build = ":TSUpdate",
 	config = function()
-		vim.cmd([[hi TreesitterContextBottom gui=underline]])
-
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 			sync_install = false,
@@ -46,5 +44,6 @@ return {
 				},
 			},
 		})
+		require("treesitter-context").setup()
 	end,
 }
