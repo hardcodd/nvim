@@ -8,7 +8,7 @@ return {
 			sync_install = false,
 			auto_install = true,
 			highlight = { enable = true },
-			indent = { enable = true, disable = {} },
+			indent = { enable = true, disable = { "python" } },
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -44,6 +44,8 @@ return {
 				},
 			},
 		})
-		require("treesitter-context").setup()
+		require("treesitter-context").setup({
+			mode = "topline",
+		})
 	end,
 }
