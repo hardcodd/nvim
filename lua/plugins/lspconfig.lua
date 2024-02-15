@@ -46,6 +46,7 @@ return {
 			"eslint",
 			"vuels",
 			"jsonls",
+			"tailwindcss",
 		}
 
 		require("mason").setup()

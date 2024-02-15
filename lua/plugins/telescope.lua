@@ -3,8 +3,10 @@ return {
 	tag = "0.1.5",
 	event = "VeryLazy",
 	dependencies = {
+		"nvim-lua/popup.nvim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
+		"nvim-telescope/telescope-media-files.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
@@ -91,6 +93,7 @@ return {
 		require("telescope").setup(opts)
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("file_browser")
+		require("telescope").load_extension("media_files")
 		-- require("telescope").load_extension("notify")
 	end,
 }
