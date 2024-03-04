@@ -9,7 +9,7 @@ return {
 			javascript = { "prettier" },
 
 			html = { "prettier" },
-			-- htmldjango = { { "djlint" } },
+			htmldjango = { "djlint" },
 			css = { "prettier" },
 			scss = { "prettier" },
 			markdown = { "prettier" },

@@ -8,7 +8,7 @@ return {
 			sync_install = false,
 			auto_install = true,
 			highlight = { enable = true },
-			indent = { enable = true, disable = { "python" } },
+			indent = { enable = true, disable = { "python", "htmldjango" } },
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -25,6 +25,7 @@ return {
 				enable_close_on_slash = true,
 				filetypes = {
 					"html",
+					"htmldjango",
 					"javascript",
 					"typescript",
 					"javascriptreact",

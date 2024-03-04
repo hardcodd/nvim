@@ -1,11 +1,11 @@
 {
   "Image Lock": {
     "prefix": "iml",
-    "body": "<img src=\"https://loremflickr.com/1920/1080/?lock=1\" alt=\"Image\" />"
+    "body": "<img src=\"https://loremflickr.com/1280/720/?lock=1\" alt=\"Image\" />"
   },
   "Image Random": {
     "prefix": "imr",
-    "body": "<img src=\"https://loremflickr.com/1920/1080/?random=1\" alt=\"Image\" />"
+    "body": "<img src=\"https://loremflickr.com/1280/720/?random=1\" alt=\"Image\" />"
   },
   "Site Header": {
     "prefix": "header",
@@ -17,7 +17,7 @@
   },
   "Sidebar": {
     "prefix": "sidebar",
-    "body": "<aside class=\"sidebar\" id=\"sidebar\">\n\t<div class=\"sidebar__content\">\n\t\t$1\n\t</div>\n</aside>"
+    "body": "<div class=\"sidebar\" id=\"sidebar\">\n\t<div class=\"sidebar__content\">\n\t\t$1\n\t</div>\n</div>"
   },
   "Main": {
     "prefix": "main",

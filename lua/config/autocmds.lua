@@ -185,3 +185,8 @@ endfunction
 
 command! -nargs=0 RemoveFile call RemoveFile()
 ]])
+
+-- Set json filetype for .djlintrc
+vim.cmd([[
+au BufRead,BufNewFile .djlintrc set filetype=json
+]])
