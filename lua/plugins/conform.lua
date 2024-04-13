@@ -10,8 +10,6 @@ return {
 
 			html = { "prettier" },
 			htmldjango = { "djlint" },
-			css = { "prettier" },
-			scss = { "prettier" },
 			markdown = { "prettier" },
 		},
 		format_after_save = {

@@ -1,8 +1,8 @@
 return {
-	"neovim/nvim-lspconfig",
+	"williamboman/mason-lspconfig.nvim",
 	dependencies = {
 		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	},
 	config = function()
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -34,62 +34,45 @@ return {
 			end,
 		})
 
-		local servers = {
-			"stylelint_lsp",
-			"lua_ls",
-			"html",
-			"emmet_language_server",
-			"cssls",
-			"tsserver",
-			"pyright",
-			"ruff_lsp",
-			"eslint",
-			"vuels",
-			"jsonls",
-			"tailwindcss",
-		}
-
 		require("mason").setup()
 		require("mason-lspconfig").setup({
-			ensure_installed = servers,
+			ensure_installed = {
+				"bashls",
+				"cssls",
+				"html",
+				"jsonls",
+				"pyright",
+				"tsserver",
+				"vimls",
+				"yamlls",
+				"emmet_ls",
+				"lua_ls",
+				"stylelint_lsp",
+				"vuels",
+				"eslint",
+			},
 		})
 
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-		for _, server in ipairs(servers) do
-			if server == "lua_ls" then
-				require("lspconfig")[server].setup({
-					capabilities = capabilities,
-					on_init = function(client)
-						local path = client.workspace_folders[1].name
-						if
-							not vim.loop.fs_stat(path .. "/.luarc.json")
-							and not vim.loop.fs_stat(path .. "/.luarc.jsonc")
-						then
-							client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
-								Lua = {
-									runtime = {
-										version = "LuaJIT",
-									},
-									workspace = {
-										checkThirdParty = true,
-										library = {
-											vim.env.VIMRUNTIME,
-										},
-									},
-								},
-							})
-
-							-- client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
-						end
-						return true
-					end,
+		require("mason-lspconfig").setup_handlers({
+			-- The first entry (without a key) will be the default handler
+			-- and will be called for each installed server that doesn't have
+			-- a dedicated handler.
+			function(server_name) -- default handler (optional)
+				require("lspconfig")[server_name].setup({})
+			end,
+			-- Next, you can provide a dedicated handler for specific servers.
+			-- For example, a handler override for the `rust_analyzer`:
+			["lua_ls"] = function()
+				require("lspconfig").lua_ls.setup({
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+						},
+					},
 				})
-			else
-				require("lspconfig")[server].setup({
-					capabilities = capabilities,
-				})
-			end
-		end
+			end,
+		})
 	end,
 }

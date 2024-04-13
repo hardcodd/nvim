@@ -1,6 +1,7 @@
 return {
 	"L3MON4D3/LuaSnip",
 	dependencies = { "rafamadriz/friendly-snippets" },
+	build = "make install_jsregexp",
 	config = function()
 		local ls = require("luasnip")
 		local types = require("luasnip.util.types")
@@ -23,17 +24,6 @@ return {
 
 			-- Autosnippets:
 			enable_autosnippets = true,
-
-			-- Crazy highlights!!
-			-- #vid3
-			-- ext_opts = nil,
-			ext_opts = {
-				[types.choiceNode] = {
-					active = {
-						virt_text = { { "←", "Error" } },
-					},
-				},
-			},
 		})
 	end,
 }

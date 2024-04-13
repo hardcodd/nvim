@@ -1,9 +1,8 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.5",
+	tag = "0.1.6",
 	event = "VeryLazy",
 	dependencies = {
-		"nvim-lua/popup.nvim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
 		"nvim-telescope/telescope-media-files.nvim",
@@ -15,13 +14,19 @@ return {
 	cmd = "Telescope",
 	keys = {
 		-- find
-		{ "ff", "<cmd> Telescope find_files <CR>", "Find files" },
-		{ "fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
+		{ "ff", "<cmd>Telescope find_files <CR>", "Find files" },
+		{ "fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
 		{ "fw", "<cmd> Telescope live_grep <CR>", "Live grep" },
-		{ "fb", "<cmd> Telescope file_browser <CR>", "File browser" },
-		{ "fh", "<cmd> Telescope help_tags <CR>", "Help page" },
-		{ "fo", "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
-		{ "fz", "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+		{ "fb", "<cmd>Telescope file_browser <CR>", "File browser" },
+		{ "fh", "<cmd>Telescope help_tags <CR>", "Help page" },
+		{ "fo", "<cmd>Telescope oldfiles <CR>", "Find oldfiles" },
+		{ "fz", "<cmd>Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+		{ "ft", "<cmd>TodoTelescope<CR>", "Find TODOs" },
+		{ "fm", "<cmd>Telescope media_files<CR>", "Find media files" },
+		{ "fr", "<cmd>Telescope lsp_references<CR>", "Find references" },
+		{ "fi", "<cmd>Telescope lsp_implementations<CR>", "Find implementations" },
+		{ "fd", "<cmd>Telescope lsp_definitions<CR>", "Find definitions" },
+		{ "fC", "<cmd>Telescope commands<CR>", "Find commands" },
 
 		-- git
 		{ "<leader>gc", "<cmd> Telescope git_commits <CR>", "Git commits" },
@@ -94,6 +99,5 @@ return {
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("media_files")
-		-- require("telescope").load_extension("notify")
 	end,
 }
