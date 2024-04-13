@@ -1,0 +1,6 @@
+{
+  "Hover effect": {
+    "prefix": "hov",
+    "body": "@include hover {\n\t${1}\n}"
+  }
+}

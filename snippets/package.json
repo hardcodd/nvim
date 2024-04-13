@@ -18,6 +18,10 @@
         "path": "./scss/overlay.json"
       },
       {
+        "language": "scss",
+        "path": "./scss/hover.json"
+      },
+      {
         "language": "html",
         "path": "./html/html.json"
       }
