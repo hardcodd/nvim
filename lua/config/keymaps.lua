@@ -83,6 +83,3 @@ elseif os_type == "Linux" then
 elseif os_type == "Windows" then
 	map("n", "<leader>o", ":!start %<cr>", opts)
 end
-
--- Jump to context
-map("n", "gk", ":lua require('treesitter-context').go_to_context(vim.v.count1)<cr>", opts)
