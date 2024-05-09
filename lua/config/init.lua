@@ -5,6 +5,7 @@ local opt = vim.opt
 -- Global settings
 vim.g.mapleader = " "
 vim.g.markdown_recommended_style = 0
+vim.g.python3_host_prog = "/usr/bin/python3"
 vim.cmd("let g:mkdp_auto_start = 1")
 vim.cmd("let g:mkdp_auto_close = 1")
 
