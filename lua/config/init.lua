@@ -52,6 +52,7 @@ opt.smartcase = true          -- Smart case for searching
 opt.ignorecase = true         -- Ignore case in search patterns
 opt.spelllang = { "en" }      -- Set spelling language to English
 opt.incsearch = true          -- Enable incremental search
+opt.whichwrap = "b,s,h,l,<,>,[,]" -- Allow <BS>, <Space>, <Left>, <Right> to move to previous/next line
 
 -- Completion and command options
 opt.completeopt = "menu,menuone,noselect"  -- Set completion options
