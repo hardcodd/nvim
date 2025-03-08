@@ -24,6 +24,10 @@
       {
         "language": "html",
         "path": "./html/html.json"
+      },
+      {
+        "language": "htmldjango",
+        "path": "./html/htmldjango.json"
       }
     ]
   }

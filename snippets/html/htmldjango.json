@@ -1,0 +1,10 @@
+{
+  "Section Title": {
+    "prefix": "st",
+    "body": "{% section_title $1 %}"
+  },
+  "Localize URL": {
+    "prefix": "lu",
+    "body": "{% localize_url \"$1\" %}"
+  }
+}
