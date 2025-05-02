@@ -1,19 +1,23 @@
 return {
 	"stevearc/conform.nvim",
-	opts = {
-		formatters_by_ft = {
-			lua = { "stylua" },
-			-- Conform will run multiple formatters sequentially
-			python = { "isort", "black", "autopep8" },
-			-- Use a sub-list to run only the first available formatter
-			javascript = { "prettier" },
-
-			html = { "prettier" },
-			htmldjango = { "djlint" },
-			markdown = { "prettier" },
-		},
-		format_after_save = {
-			lsp_fallback = true,
-		},
-	},
+  event = "BufWritePre",
+	config = function()
+		require("conform").setup({
+			formatters_by_ft = {
+				lua = { "stylua" },
+				javascript = { "prettier" },
+				html = { "prettier" },
+				htmldjango = { "djlint" },
+				scss = { "stylelint", "prettier" },
+				css = { "stylelint", "prettier" },
+				python = { "black", "isort", "autopep8" },
+			},
+		})
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			pattern = "*",
+			callback = function(args)
+				require("conform").format({ bufnr = args.buf })
+			end,
+		})
+	end,
 }

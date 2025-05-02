@@ -11,4 +11,8 @@ M.get_os_type = function()
 	end
 end
 
+M.augroup = function(name)
+	return vim.api.nvim_create_augroup("hardcodd_" .. name, { clear = true })
+end
+
 return M

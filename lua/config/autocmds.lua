@@ -1,10 +1,7 @@
 local cmd = vim.cmd
+local augroup = require("config.utils").augroup
 
-local function augroup(name)
-	return vim.api.nvim_create_augroup("hardcodd_" .. name, { clear = true })
-end
-
--- close some filetypes with <q>
+-- Close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("close_with_q"),
 	pattern = {
@@ -40,28 +37,24 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
--- Return to last edit position when opening files
+-- Return to last edited position
 vim.api.nvim_create_autocmd("BufReadPost", {
+	group = augroup("return_to_last_position"),
 	pattern = "*",
-	command = [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]],
+	callback = function()
+		if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			vim.cmd('normal! g`"')
+		end
+	end,
 })
 
--- Highlight yanked text
+-- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
+	group = augroup("highlight_yank"),
 	pattern = "*",
-	command = "silent! lua vim.highlight.on_yank {higroup = 'IncSearch', timeout = 200}",
-})
-
--- Save folds
-vim.api.nvim_create_autocmd({ "BufWinLeave", "BufLeave" }, {
-	pattern = { "*" },
-	command = [[silent! mkview]],
-})
-
--- Load folds
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-	pattern = { "*" },
-	command = [[silent! loadview]],
+	callback = function()
+		vim.highlight.on_yank({ timeout = 200 })
+	end,
 })
 
 -- Save buffer with prompt
@@ -108,7 +101,6 @@ function! RemoveFile()
     endif
   endif
 endfunction
-
 command! -nargs=0 RemoveFile call RemoveFile()
 ]])
 

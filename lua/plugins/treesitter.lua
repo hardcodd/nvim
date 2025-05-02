@@ -1,49 +1,35 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	dependencies = { "windwp/nvim-ts-autotag" },
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+		local configs = require("nvim-treesitter.configs")
+
+		configs.setup({
 			sync_install = false,
 			auto_install = true,
 			highlight = { enable = true },
-			indent = { enable = true, disable = { "python", "htmldjango" } },
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					init_selection = "<C-n>", -- init node
-					node_incremental = "<C-n>", -- node
-					scope_incremental = "<C-s>", -- scope
-					node_decremental = "<C-m>", -- node
-				},
-			},
-			autotag = {
-				enable = true,
-				enable_rename = true,
-				enable_close = true,
-				enable_close_on_slash = true,
-				filetypes = {
-					"html",
-					"htmldjango",
-					"javascript",
-					"typescript",
-					"javascriptreact",
-					"typescriptreact",
-					"svelte",
-					"vue",
-					"tsx",
-					"jsx",
-					"rescript",
-					"xml",
-					"php",
-					"markdown",
-					"astro",
-					"glimmer",
-					"handlebars",
-					"hbs",
-				},
-			},
+			indent = { 
+        enable = true,
+        disable = { "python", "htmldjango" }
+      },
+      ensure_installed = {
+        "bash",
+        "css",
+        "html",
+        "htmldjango",
+        "javascript",
+        "json",
+        "lua",
+        "vim",
+        "vimdoc",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "scss",
+        "toml",
+        "typescript",
+        "yaml"
+      },
 		})
 	end,
 }
