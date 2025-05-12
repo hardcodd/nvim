@@ -36,67 +36,26 @@ return {
 					},
 				},
 				file_ignore_patterns = {
-					-- version control
-					"/.git",
-					"/.hg",
-					"/.svn",
-					"node_modules",
-
-					-- django / python
-					"__pycache__",
-					"migrations",
-					"/venv",
-					"/.venv",
-					"/env",
-					"media/",
-					"cache/",
-					"static/",
-					"%.sqlite3",
-					"%.db",
-
-					-- images
-					"%.jpg",
-					"%.jpeg",
-					"%.png",
-					"%.gif",
-					"%.webp",
-					"%.svg",
-					"%.ico",
-					"%.tiff",
-					"%.bmp",
-					"%.webp",
-					"%.heic",
-					"%.heif",
-					"%.avif",
-
-					-- archives
-					"%.zip",
-					"%.tar",
-					"%.gz",
-					"%.bz2",
-					"%.xz",
-					"%.7z",
-					"%.rar",
-					"%.tar.gz",
-					"%.tar.bz2",
-					"%.tar.xz",
-
-					-- os files
-					"%.app",
-					"%.exe",
-					"%.msi",
-					"%.dmg",
-					"%.deb",
-					"%.rpm",
-					"%.exe",
-					"%.dll",
-
-					-- file browser. Win / MacOs / Linux
-					".DS_Store",
-					"Thumbs.db",
-					".Trashes",
+          "node_modules/",
+          "media/",
+          ".git/",
+          "cache/",
+          "__pycache__/",
+          ".DS_Store",
+          "%.jpg",
+          "%.png",
+          "%.ico",
+          "%.mo",
+          "%.dbsqlite3",
 				},
 			},
+      pickers = {
+        find_files = {
+          hidden = true,
+          find_command = { "fd", "--type", "f", "--hidden" },
+          file_previewer = require("telescope.previewers").cat.new
+        },
+      },
 			extensions = {
 				fzf = {
 					fuzzy = true, -- false will only do exact matching
