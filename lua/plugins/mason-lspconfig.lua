@@ -1,98 +1,85 @@
 return {
-	"williamboman/mason.nvim",
-	"neovim/nvim-lspconfig",
 	{
-
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason.nvim",
 		config = function()
 			require("mason").setup()
+		end,
+	},
+
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			vim.lsp.config("*", {
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+
+				on_attach = function(client, bufnr)
+					vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+					local opts = { noremap = true, silent = true }
+					local function map(...)
+						vim.api.nvim_buf_set_keymap(bufnr, ...)
+					end
+
+					map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+					map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+					map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+					map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+					map("n", "<space>s", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+					map("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+					map("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+					map("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+					map("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+					map("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+					map("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+					map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+					map("n", "<space>fl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+					map("n", "dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+					map("n", "dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+				end,
+			})
+
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+					},
+				},
+			})
+
+			vim.lsp.config("pyright", {
+				on_attach = function(client, bufnr)
+					client.server_capabilities.hoverProvider = nil
+					client.server_capabilities.definitionProvider = nil
+					client.server_capabilities.typeDefinitionProvider = nil
+					client.server_capabilities.implementationProvider = nil
+					client.server_capabilities.referencesProvider = nil
+				end,
+			})
+		end,
+	},
+
+	{
+		"mason-org/mason-lspconfig.nvim",
+		config = function()
 			require("mason-lspconfig").setup({
+				automatic_enable = true,
 				ensure_installed = {
-					"bashls",
-					"cssls",
-					"html",
-					"jsonls",
 					"jedi_language_server",
-          "pyright",
 					"vimls",
 					"emmet_ls",
-					"lua_ls",
 					"stylelint_lsp",
 					"eslint",
 					"ts_ls",
+					"lua_ls",
+					"clangd",
+					"pyright",
+					"jsonls",
+					"html",
+					"cssls",
+					"bashls",
 				},
-				automatic_installation = true,
-			})
-
-			require("mason-lspconfig").setup_handlers({
-				-- The first entry (without a key) will be the default handler
-				-- and will be called for each installed server that doesn't have
-				-- a dedicated handler.
-				function(server_name) -- default handler (optional)
-					local capabilities = require("cmp_nvim_lsp").default_capabilities()
-					local on_attach = function(client, bufnr)
-						-- Enable completion triggered by <c-x><c-o>
-						vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-						-- Mappings.
-						local opts = { noremap = true, silent = true }
-						local function buf_set_keymap(...)
-							vim.api.nvim_buf_set_keymap(bufnr, ...)
-						end
-						buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-						buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-						buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-						buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-						buf_set_keymap("n", "<space>s", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-						buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-						buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-						buf_set_keymap(
-							"n",
-							"<space>wl",
-							"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
-							opts
-						)
-						buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-						buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-						buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-						buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-						buf_set_keymap("n", "<space>fl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-						buf_set_keymap("n", "dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-						buf_set_keymap("n", "dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-					end
-					require("lspconfig")[server_name].setup({
-						capabilities = capabilities,
-						on_attach = on_attach,
-					})
-				end,
-				-- Next, you can provide a dedicated handler for specific servers.
-				-- For example, a handler override for the `rust_analyzer`:
-				["lua_ls"] = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.lua_ls.setup({
-						settings = {
-							Lua = {
-								diagnostics = {
-									globals = { "vim" },
-								},
-							},
-						},
-					})
-				end,
-				["pyright"] = function()
-					local lspconfig = require("lspconfig")
-					local capabilities = require("cmp_nvim_lsp").default_capabilities()
-					lspconfig.pyright.setup({
-						on_attach = function(client, bufnr)
-							client.server_capabilities.hoverProvider = nil
-							client.server_capabilities.definitionProvider = nil
-							client.server_capabilities.typeDefinitionProvider = nil
-							client.server_capabilities.implementationProvider = nil
-							client.server_capabilities.referencesProvider = nil
-						end,
-						capabilities = capabilities,
-					})
-				end,
 			})
 		end,
 	},
