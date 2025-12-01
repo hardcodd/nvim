@@ -30,8 +30,8 @@ map("i", "<c-k>", "<Up>", opts)
 map("i", "<c-l>", "<Right>", opts)
 
 -- Buffers
-map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts) -- next
-map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts) -- previous
+map("n", "<Tab>", ":bnext<CR>", opts) -- next
+map("n", "<S-Tab>", ":bprev<CR>", opts) -- previous
 map("n", "<leader>x", ":bdelete<CR>", opts) -- close
 map("n", "<leader>w", ":WSave<CR>", opts) -- save
 map("n", "<leader>n", ":enew<CR>", opts) -- new
@@ -75,7 +75,7 @@ map("n", "cd", ":cd %:p:h<CR>", opts)
 map("n", "<leader>e", ":e .<CR>", opts)
 
 -- Telescope
-map("n", "<leader>ff", ":Telescope find_files<CR>", opts) -- find files
+map("n", "<leader>ff", ":Telescope fd<CR>", opts) -- find files
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts) -- live grep
 map("n", "<leader>fb", ":Telescope buffers<CR>", opts) -- buffers
 map("n", "<leader>fh", ":Telescope help_tags<CR>", opts) -- help tags

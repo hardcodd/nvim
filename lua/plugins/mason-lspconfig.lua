@@ -79,6 +79,7 @@ return {
 					"html",
 					"cssls",
 					"bashls",
+          "ruff"
 				},
 			})
 		end,

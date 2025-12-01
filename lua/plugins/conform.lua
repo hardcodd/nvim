@@ -10,7 +10,7 @@ return {
 				htmldjango = { "djlint" },
 				scss = { "stylelint", "prettier" },
 				css = { "stylelint", "prettier" },
-				python = { "black", "isort", "autopep8" },
+				python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 			},
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
