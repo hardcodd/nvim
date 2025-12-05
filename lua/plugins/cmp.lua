@@ -9,7 +9,7 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"onsails/lspkind.nvim",
 	},
-  event = { "VeryLazy" },
+	event = { "VeryLazy" },
 	config = function()
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
