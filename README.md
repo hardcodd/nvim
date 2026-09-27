@@ -1,6 +1,6 @@
 # Neovim configuration with Telescope, Tree-sitter, and Catppuccin
 
-![Illustration of Neovim editing Lua configuration code in a terminal](assets/nvim-social-preview.jpg)
+![Neovim editing Lua configuration code in a terminal](assets/nvim-social-preview.png)
 
 A portable, Lua-based Neovim configuration with automatic plugin installation,
 pinned revisions, project-aware editing, and an Obsidian knowledge base. Clone
