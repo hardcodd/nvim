@@ -1,12 +1,15 @@
 # Operations
 
+The configuration has been tested only on macOS 27.0 (build 26A428) with
+Neovim 0.12.5. Other operating systems have not been tested.
+
 ## First launch after cloning
 
 1. Install Neovim `0.12.5` or a compatible newer stable release.
 2. Ensure Git `2.19` or newer is available. Tree-sitter also needs a C
    compiler, `curl`, `tar`, and `tree-sitter-cli >= 0.26.1`. On macOS, install
    the CLI with `brew install tree-sitter-cli`; Apple developer tools provide
-   the compiler.
+   the compiler. Install ripgrep (`rg`) to use Telescope project text search.
 3. Clone into Neovim's configuration directory:
    `git clone https://github.com/hardcodd/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}/nvim"`.
 4. Start `nvim` with network access.
