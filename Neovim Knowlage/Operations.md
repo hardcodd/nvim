@@ -82,6 +82,23 @@ Parser installation errors are available in `:TSLog`. To retry, run
 reopen the buffer. Use `:TSInstall! python` to repair an incomplete install.
 Installed parsers work offline; `:Inspect` checks highlighting at the cursor.
 
+## System clipboard
+
+`init.lua` sets `clipboard=unnamedplus`: ordinary `y`/`yy` copies to the
+system clipboard, and `p`/`P` pastes from it. Delete (`d`) and change (`c`)
+also replace the clipboard with the removed text. Use `"_dd` to delete a
+line without replacing the clipboard; explicit named registers stay separate.
+
+Neovim selects its clipboard provider automatically. On macOS it uses the
+built-in `pbcopy` and `pbpaste`, with no additional plugin. Other systems need
+an available clipboard provider; inspect it with `:checkhealth vim.provider`.
+Restart Neovim after this configuration change, or run
+`:set clipboard=unnamedplus` in an existing session. Check copying with `yy`
+into another application and using `p` to paste text copied there.
+
+`tests/init_spec.lua` checks copying, pasting, deletion, and explicit-register
+bypass using a stub provider, without changing the real system clipboard.
+
 ## Closing
 
 `Space q` starts a confirmed Neovim quit. `Space x` removes only the current

@@ -16,9 +16,19 @@ vim.fn.writefile({
 }, lazy_path .. "/lua/lazy/init.lua")
 
 vim.cmd("set rtp^=" .. vim.fn.fnameescape(config_directory))
+local clipboard = { {}, "v" }
+vim.g.clipboard = {
+  name = "Test clipboard",
+  copy = { ["+"] = function(lines, regtype)
+    clipboard = { vim.deepcopy(lines), regtype }
+  end },
+  paste = { ["+"] = function() return clipboard end },
+  cache_enabled = 0,
+}
 dofile(config_directory .. "/init.lua")
 
 local expected_options = {
+  clipboard = "unnamedplus",
   number = true,
   relativenumber = true,
   signcolumn = "yes",
@@ -35,6 +45,21 @@ local expected_options = {
 for option, expected_value in pairs(expected_options) do
   assert(vim.o[option] == expected_value, option .. " was not configured")
 end
+
+vim.api.nvim_buf_set_lines(0, 0, -1, false, { "copied text" })
+vim.cmd("normal! yy")
+assert(vim.deep_equal(clipboard, { { "copied text", "" }, "V" }), "yank must copy to the OS provider")
+clipboard = { { "external text" }, "v" }
+vim.cmd("normal! p")
+assert(vim.api.nvim_get_current_line() == "cexternal textopied text", "put must read the OS provider")
+vim.cmd('normal! "ayy')
+assert(clipboard[1][1] == "external text", "named registers must bypass the clipboard")
+vim.cmd('normal! "_dd')
+assert(clipboard[1][1] == "external text", "black-hole deletion must preserve the clipboard")
+vim.api.nvim_buf_set_lines(0, 0, -1, false, { "deleted text", "remaining" })
+vim.cmd("normal! ggdd")
+assert(vim.deep_equal(clipboard, { { "deleted text", "" }, "V" }), "delete must copy to the OS provider")
+vim.bo.modified = false
 
 assert(vim.g.mapleader == " ", "leader key was not configured")
 assert(vim.g.editorconfig == true, "native EditorConfig must be enabled")

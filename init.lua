@@ -5,6 +5,7 @@ vim.g.editorconfig = true
 
 local options = {
   backup = false,
+  clipboard = "unnamedplus",
   completeopt = "menu,menuone,noselect",
   confirm = true,
   cursorline = true,

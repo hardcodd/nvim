@@ -10,6 +10,10 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
   possible.
 - Enable practical editing, search, UI, split-navigation, persistence, and
   completion defaults.
+- Share the default yank, delete, change, and put register with the OS clipboard
+  through `clipboard=unnamedplus` and Neovim's automatic clipboard provider.
+  Preserve explicit named and black-hole registers. Add no dependencies or
+  platform-specific provider override; macOS uses its built-in pbcopy/pbpaste.
 - Display long lines without soft wrapping by default, including in newly
   opened editing windows. Keep the file text unchanged and allow a window-local
   `wrap` override when needed.
