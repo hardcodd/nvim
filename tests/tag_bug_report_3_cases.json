@@ -1,0 +1,1776 @@
+[
+  {
+    "id": "M007",
+    "label": "html textarea closing=True",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><textarea>text <fake> literal</textarea></main>"
+    ],
+    "cursor": [
+      1,
+      37
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><article>text <fake> literal</article></main>"
+    ]
+  },
+  {
+    "id": "M008",
+    "label": "html textarea closing=True",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><textarea>text <fake> literal </fake></textarea></main>"
+    ],
+    "cursor": [
+      1,
+      45
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><article>text <fake> literal </fake></article></main>"
+    ]
+  },
+  {
+    "id": "M013",
+    "label": "vue script closing=False",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<script>const marker = '<section>';</script>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article>const marker = '<section>';</article>"
+    ]
+  },
+  {
+    "id": "M014",
+    "label": "vue script closing=False",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<script id=\"x\">const marker = '<section>';</script>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">const marker = '<section>';</article>"
+    ]
+  },
+  {
+    "id": "M015",
+    "label": "vue style closing=False",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<style>main::after { content: '<footer>'; }</style>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article>main::after { content: '<footer>'; }</article>"
+    ]
+  },
+  {
+    "id": "M016",
+    "label": "vue style closing=False",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<style id=\"x\">main::after { content: '<footer>'; }</style>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">main::after { content: '<footer>'; }</article>"
+    ]
+  },
+  {
+    "id": "M017",
+    "label": "html html closing=False",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<html lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const re = /\"/;</script></section></main></body></html>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const re = /\"/;</script></section></main></body></article>"
+    ]
+  },
+  {
+    "id": "M018",
+    "label": "html html closing=False",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<html lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const re = /x/;</script></section></main></body></html>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const re = /x/;</script></section></main></body></article>"
+    ]
+  },
+  {
+    "id": "M019",
+    "label": "html html closing=False",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<html lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const marker = '<fake>'; const re = /\"/;</script></section></main></body></html>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article lang=\"ru\"><body><main data-path=\"C:\\\"><section><script>const marker = '<fake>'; const re = /\"/;</script></section></main></body></article>"
+    ]
+  },
+  {
+    "id": "M020",
+    "label": "javascriptreact div closing=False",
+    "filetype": "javascriptreact",
+    "extension": "jsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><article class=\"x\">text</article><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "X061",
+    "label": "HTML complex document rename html opener",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<!DOCTYPE html>",
+      "<html lang=\"ru\">",
+      "<head><title>Dashboard</title><style>.x::before { content: '<fake>'; }</style></head>",
+      "<body>",
+      "  <main data-path=\"C:\\\">",
+      "    <section>",
+      "      <!-- <aside><div> fake </div></aside> -->",
+      "      <table><thead><tr><th>Name<th>Value<tbody><tr><td>A<td><b>1</b></table>",
+      "      <ul><li>one<li><span>two</span><li>three</ul>",
+      "      <svg viewBox=\"0 0 1 1\"><g><path d=\"M0 0\" /></g></svg>",
+      "      <textarea>text <fake> literal</textarea>",
+      "      <script>const marker = '<fake>'; const re = /\"/;</script>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</body>",
+      "</html>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "expected": [
+      "<!DOCTYPE html>",
+      "<article lang=\"ru\">",
+      "<head><title>Dashboard</title><style>.x::before { content: '<fake>'; }</style></head>",
+      "<body>",
+      "  <main data-path=\"C:\\\">",
+      "    <section>",
+      "      <!-- <aside><div> fake </div></aside> -->",
+      "      <table><thead><tr><th>Name<th>Value<tbody><tr><td>A<td><b>1</b></table>",
+      "      <ul><li>one<li><span>two</span><li>three</ul>",
+      "      <svg viewBox=\"0 0 1 1\"><g><path d=\"M0 0\" /></g></svg>",
+      "      <textarea>text <fake> literal</textarea>",
+      "      <script>const marker = '<fake>'; const re = /\"/;</script>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</body>",
+      "</article>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ]
+  },
+  {
+    "id": "X076",
+    "label": "HTML complex document rename textarea closer",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<!DOCTYPE html>",
+      "<html lang=\"ru\">",
+      "<head><title>Dashboard</title><style>.x::before { content: '<fake>'; }</style></head>",
+      "<body>",
+      "  <main data-path=\"C:\\\">",
+      "    <section>",
+      "      <!-- <aside><div> fake </div></aside> -->",
+      "      <table><thead><tr><th>Name<th>Value<tbody><tr><td>A<td><b>1</b></table>",
+      "      <ul><li>one<li><span>two</span><li>three</ul>",
+      "      <svg viewBox=\"0 0 1 1\"><g><path d=\"M0 0\" /></g></svg>",
+      "      <textarea>text <fake> literal</textarea>",
+      "      <script>const marker = '<fake>'; const re = /\"/;</script>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</body>",
+      "</html>"
+    ],
+    "cursor": [
+      11,
+      37
+    ],
+    "expected": [
+      "<!DOCTYPE html>",
+      "<html lang=\"ru\">",
+      "<head><title>Dashboard</title><style>.x::before { content: '<fake>'; }</style></head>",
+      "<body>",
+      "  <main data-path=\"C:\\\">",
+      "    <section>",
+      "      <!-- <aside><div> fake </div></aside> -->",
+      "      <table><thead><tr><th>Name<th>Value<tbody><tr><td>A<td><b>1</b></table>",
+      "      <ul><li>one<li><span>two</span><li>three</ul>",
+      "      <svg viewBox=\"0 0 1 1\"><g><path d=\"M0 0\" /></g></svg>",
+      "      <article>text <fake> literal</article>",
+      "      <script>const marker = '<fake>'; const re = /\"/;</script>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</body>",
+      "</html>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ]
+  },
+  {
+    "id": "A0055",
+    "label": "xml empty name closing=False attrs='' tail=' ' delete_type",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0056",
+    "label": "xml empty name closing=False attrs='' tail=' ' delete_paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0057",
+    "label": "xml empty name closing=False attrs='' tail=' ' change_stream",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "t",
+        "phase": 2
+      },
+      {
+        "paste": "ion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0058",
+    "label": "xml empty name closing=True attrs='' tail=' ' delete_type",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0059",
+    "label": "xml empty name closing=True attrs='' tail=' ' delete_paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0060",
+    "label": "xml empty name closing=True attrs='' tail=' ' change_stream",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div ><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "t",
+        "phase": 2
+      },
+      {
+        "paste": "ion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section ><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0115",
+    "label": "typescriptreact empty name closing=False attrs=' class=\"x\"' tail='' delete_type",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0116",
+    "label": "typescriptreact empty name closing=False attrs=' class=\"x\"' tail='' delete_paste",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0117",
+    "label": "typescriptreact empty name closing=False attrs=' class=\"x\"' tail='' change_stream",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "t",
+        "phase": 2
+      },
+      {
+        "paste": "ion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0151",
+    "label": "javascriptreact empty name closing=False attrs=' class=\"x\"' tail='' delete_type",
+    "filetype": "javascriptreact",
+    "extension": "jsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0152",
+    "label": "javascriptreact empty name closing=False attrs=' class=\"x\"' tail='' delete_paste",
+    "filetype": "javascriptreact",
+    "extension": "jsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0153",
+    "label": "javascriptreact empty name closing=False attrs=' class=\"x\"' tail='' change_stream",
+    "filetype": "javascriptreact",
+    "extension": "jsx",
+    "before": [
+      "<main><div class=\"x\">text</div><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "t",
+        "phase": 2
+      },
+      {
+        "paste": "ion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section class=\"x\">text</section><aside>end</aside></main>"
+    ]
+  },
+  {
+    "id": "A0289",
+    "label": "literal vue closing=False paste=False '<template>\\n<main>{{\\n  \"<span>text</span>\"\\n}}</main>\\n</template>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ],
+    "cursor": [
+      3,
+      4
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template>",
+      "<main>{{",
+      "  \"<section>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ]
+  },
+  {
+    "id": "A0290",
+    "label": "literal vue closing=False paste=True '<template>\\n<main>{{\\n  \"<span>text</span>\"\\n}}</main>\\n</template>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ],
+    "cursor": [
+      3,
+      4
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template>",
+      "<main>{{",
+      "  \"<section>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ]
+  },
+  {
+    "id": "A0291",
+    "label": "literal vue closing=True paste=False '<template>\\n<main>{{\\n  \"<span>text</span>\"\\n}}</main>\\n</template>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ],
+    "cursor": [
+      3,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</section>\"",
+      "}}</main>",
+      "</template>"
+    ]
+  },
+  {
+    "id": "A0292",
+    "label": "literal vue closing=True paste=True '<template>\\n<main>{{\\n  \"<span>text</span>\"\\n}}</main>\\n</template>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</span>\"",
+      "}}</main>",
+      "</template>"
+    ],
+    "cursor": [
+      3,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template>",
+      "<main>{{",
+      "  \"<span>text</section>\"",
+      "}}</main>",
+      "</template>"
+    ]
+  },
+  {
+    "id": "A0293",
+    "label": "literal vue closing=False paste=False '<main>{{\\n`<span>text</span>`\\n}}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      "`<span>text</span>`",
+      "}}</main>"
+    ],
+    "cursor": [
+      2,
+      2
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      "`<section>text</span>`",
+      "}}</main>"
+    ]
+  },
+  {
+    "id": "A0294",
+    "label": "literal vue closing=False paste=True '<main>{{\\n`<span>text</span>`\\n}}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      "`<span>text</span>`",
+      "}}</main>"
+    ],
+    "cursor": [
+      2,
+      2
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      "`<section>text</span>`",
+      "}}</main>"
+    ]
+  },
+  {
+    "id": "A0295",
+    "label": "literal vue closing=True paste=False '<main>{{\\n`<span>text</span>`\\n}}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      "`<span>text</span>`",
+      "}}</main>"
+    ],
+    "cursor": [
+      2,
+      13
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      "`<span>text</section>`",
+      "}}</main>"
+    ]
+  },
+  {
+    "id": "A0296",
+    "label": "literal vue closing=True paste=True '<main>{{\\n`<span>text</span>`\\n}}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      "`<span>text</span>`",
+      "}}</main>"
+    ],
+    "cursor": [
+      2,
+      13
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      "`<span>text</section>`",
+      "}}</main>"
+    ]
+  },
+  {
+    "id": "A0297",
+    "label": "literal vue closing=False paste=False '<main>{{ fn(\\n  \"<span>text</span>\"\\n) }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn(",
+      "  \"<span>text</span>\"",
+      ") }}</main>"
+    ],
+    "cursor": [
+      2,
+      4
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn(",
+      "  \"<section>text</span>\"",
+      ") }}</main>"
+    ]
+  },
+  {
+    "id": "A0298",
+    "label": "literal vue closing=False paste=True '<main>{{ fn(\\n  \"<span>text</span>\"\\n) }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn(",
+      "  \"<span>text</span>\"",
+      ") }}</main>"
+    ],
+    "cursor": [
+      2,
+      4
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn(",
+      "  \"<section>text</span>\"",
+      ") }}</main>"
+    ]
+  },
+  {
+    "id": "A0299",
+    "label": "literal vue closing=True paste=False '<main>{{ fn(\\n  \"<span>text</span>\"\\n) }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn(",
+      "  \"<span>text</span>\"",
+      ") }}</main>"
+    ],
+    "cursor": [
+      2,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn(",
+      "  \"<span>text</section>\"",
+      ") }}</main>"
+    ]
+  },
+  {
+    "id": "A0300",
+    "label": "literal vue closing=True paste=True '<main>{{ fn(\\n  \"<span>text</span>\"\\n) }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn(",
+      "  \"<span>text</span>\"",
+      ") }}</main>"
+    ],
+    "cursor": [
+      2,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn(",
+      "  \"<span>text</section>\"",
+      ") }}</main>"
+    ]
+  },
+  {
+    "id": "A0301",
+    "label": "literal vue closing=False paste=False '<main>{{ condition ?\\n \"<span>text</span>\" : \"\" }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ condition ?",
+      " \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      3
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ condition ?",
+      " \"<section>text</span>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "A0302",
+    "label": "literal vue closing=False paste=True '<main>{{ condition ?\\n \"<span>text</span>\" : \"\" }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ condition ?",
+      " \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      3
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ condition ?",
+      " \"<section>text</span>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "A0303",
+    "label": "literal vue closing=True paste=False '<main>{{ condition ?\\n \"<span>text</span>\" : \"\" }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ condition ?",
+      " \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      14
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ condition ?",
+      " \"<span>text</section>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "A0304",
+    "label": "literal vue closing=True paste=True '<main>{{ condition ?\\n \"<span>text</span>\" : \"\" }}</main>'",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ condition ?",
+      " \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      14
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ condition ?",
+      " \"<span>text</section>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "Q011",
+    "label": "text container boundary html textarea closing=False ciw",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<textarea id=\"x\">text <fake> literal</textarea>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q015",
+    "label": "text container boundary html title closing=False ciw",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<title id=\"x\">text <fake> literal</title>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q051",
+    "label": "text container boundary vue textarea closing=False ciw",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<textarea id=\"x\">text <fake> literal</textarea>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q055",
+    "label": "text container boundary vue title closing=False ciw",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<title id=\"x\">text <fake> literal</title>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q071",
+    "label": "text container boundary svelte textarea closing=False ciw",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<textarea id=\"x\">text <fake> literal</textarea>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q075",
+    "label": "text container boundary svelte title closing=False ciw",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<title id=\"x\">text <fake> literal</title>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article id=\"x\">text <fake> literal</article>"
+    ]
+  },
+  {
+    "id": "Q109",
+    "label": "correct end-of-line insertion xml div closing=False diw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div",
+      " id=\"x\">text</div></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "a"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><article",
+      " id=\"x\">text</article></main>"
+    ]
+  },
+  {
+    "id": "Q110",
+    "label": "correct end-of-line insertion xml div closing=True diw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div",
+      "></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "a"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><article>text</article",
+      "></main>"
+    ]
+  },
+  {
+    "id": "Q119",
+    "label": "backslash attribute xml div closing=False ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"C:\\\">text</div>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title=\"C:\\\">text</article>"
+    ]
+  },
+  {
+    "id": "Q120",
+    "label": "backslash attribute xml div closing=True ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"C:\\\">text</div>"
+    ],
+    "cursor": [
+      1,
+      23
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title=\"C:\\\">text</article>"
+    ]
+  },
+  {
+    "id": "Q121",
+    "label": "backslash attribute xml div closing=False ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"a\\\\\">text</div>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title=\"a\\\\\">text</article>"
+    ]
+  },
+  {
+    "id": "Q122",
+    "label": "backslash attribute xml div closing=True ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"a\\\\\">text</div>"
+    ],
+    "cursor": [
+      1,
+      23
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title=\"a\\\\\">text</article>"
+    ]
+  },
+  {
+    "id": "Q123",
+    "label": "backslash attribute xml div closing=False ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title='a\\'>text</div>"
+    ],
+    "cursor": [
+      1,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title='a\\'>text</article>"
+    ]
+  },
+  {
+    "id": "Q124",
+    "label": "backslash attribute xml div closing=True ciw",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title='a\\'>text</div>"
+    ],
+    "cursor": [
+      1,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article title='a\\'>text</article>"
+    ]
+  },
+  {
+    "id": "C091",
+    "label": "xml: rename with attribute title=\"C:\\\"",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"C:\\\"></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section title=\"C:\\\"></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "C093",
+    "label": "xml: rename with attribute title=\"a\\\\\"",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"a\\\\\"></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section title=\"a\\\\\"></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "C095",
+    "label": "xml: rename with attribute title='a\\'",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title='a\\'></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section title='a\\'></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  }
+]

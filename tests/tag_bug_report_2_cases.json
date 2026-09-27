@@ -1,0 +1,1039 @@
+[
+  {
+    "id": "F006",
+    "label": "html stream paste complete opener first chunk",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "text",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>text</div></main>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "F007",
+    "label": "html stream paste complete nested opener first chunk",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "<span>text</span>",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div><span>text</span></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "F021",
+    "label": "xml stream paste complete opener first chunk",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "text",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>text</div></main>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "F022",
+    "label": "xml stream paste complete nested opener first chunk",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "<span>text</span>",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div><span>text</span></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "F030",
+    "label": "xml replace closing name with clipboard after diw closing=True",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div></main>"
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ]
+  },
+  {
+    "id": "F036",
+    "label": "typescriptreact stream paste complete opener first chunk",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<main></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "text",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>text</div></main>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "F037",
+    "label": "typescriptreact stream paste complete nested opener first chunk",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "<span>text</span>",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div><span>text</span></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "F051",
+    "label": "vue stream paste complete opener first chunk",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "text",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>text</div></main>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "F052",
+    "label": "vue stream paste complete nested opener first chunk",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "<span>text</span>",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div><span>text</span></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "F066",
+    "label": "svelte stream paste complete opener first chunk",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "text",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>text</div></main>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "F067",
+    "label": "svelte stream paste complete nested opener first chunk",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div>",
+        "phase": 1
+      },
+      {
+        "paste": "<span>text</span>",
+        "phase": 2
+      },
+      {
+        "paste": "</div>",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div><span>text</span></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "F082",
+    "label": "xml enter Insert elsewhere then rename second closing name",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>a</div><span>b</span></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "keys": "<Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>"
+      },
+      {
+        "keys": "<Del><Del><Del><Del>"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>a</div><section>b</section></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "F083",
+    "label": "xml enter Insert elsewhere then append second closing name",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>a</div><span>b</span></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "keys": "<Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right>"
+      },
+      {
+        "text": "x",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div>a</div><spanx>b</spanx></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "F086",
+    "label": "markdown paste complete code then paste replacement inside literal",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "```html\n<div>text</div>\n```"
+      },
+      {
+        "keys": "<Esc>"
+      },
+      {
+        "cursor": [
+          2,
+          1
+        ]
+      },
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```html",
+      "<section>text</div>",
+      "```"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "F087",
+    "label": "html paste complete code then paste replacement inside literal",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<textarea><div>text</div></textarea>"
+      },
+      {
+        "keys": "<Esc>"
+      },
+      {
+        "cursor": [
+          1,
+          11
+        ]
+      },
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<textarea><section>text</div></textarea>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "F088",
+    "label": "vue paste complete code then paste replacement inside literal",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<main>{{ \"<span>text</span>\" }}</main>"
+      },
+      {
+        "keys": "<Esc>"
+      },
+      {
+        "cursor": [
+          1,
+          11
+        ]
+      },
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<section>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "N045",
+    "label": "xml closing complete name deletion and replacement",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>text</div><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "diw"
+      },
+      {
+        "keys": "i"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>text</section><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      17
+    ]
+  },
+  {
+    "id": "N046",
+    "label": "xml consecutive renames without leaving Insert",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<main><div>a</div><span>b</span></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Right><Del><Del><Del><Del>"
+      },
+      {
+        "text": "article",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>a</section><article>b</article></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "L001",
+    "label": "markdown rename literal name closing=False: ```html\n<div>text</div>\n`",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```html",
+      "<div>text</div>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```html",
+      "<section>text</div>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      1
+    ]
+  },
+  {
+    "id": "L002",
+    "label": "markdown rename literal name closing=True: ```html\n<div>text</div>\n`",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```html",
+      "<div>text</div>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```html",
+      "<div>text</section>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      11
+    ]
+  },
+  {
+    "id": "L004",
+    "label": "markdown rename literal name closing=False: ```xml\n<div>text</div>\n``",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```xml",
+      "<div>text</div>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```xml",
+      "<section>text</div>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      1
+    ]
+  },
+  {
+    "id": "L005",
+    "label": "markdown rename literal name closing=True: ```xml\n<div>text</div>\n``",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```xml",
+      "<div>text</div>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```xml",
+      "<div>text</section>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      11
+    ]
+  },
+  {
+    "id": "L007",
+    "label": "markdown rename literal name closing=False: ```tsx\n<Card>text</Card>\n",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```tsx",
+      "<Card>text</Card>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```tsx",
+      "<section>text</Card>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      1
+    ]
+  },
+  {
+    "id": "L008",
+    "label": "markdown rename literal name closing=True: ```tsx\n<Card>text</Card>\n",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "```tsx",
+      "<Card>text</Card>",
+      "```"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "```tsx",
+      "<Card>text</section>",
+      "```"
+    ],
+    "cursor": [
+      2,
+      12
+    ]
+  },
+  {
+    "id": "L011",
+    "label": "markdown rename literal name closing=True: `<div>text</div>`",
+    "filetype": "markdown",
+    "extension": "md",
+    "before": [
+      "`<div>text</div>`"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "`<div>text</section>`"
+    ],
+    "cursor": [
+      1,
+      12
+    ]
+  },
+  {
+    "id": "L016",
+    "label": "html rename literal name closing=False: <textarea><div>text</div>",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<textarea><div>text</div></textarea>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<textarea><section>text</div></textarea>"
+    ],
+    "cursor": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": "L017",
+    "label": "html rename literal name closing=True: <textarea><div>text</div>",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<textarea><div>text</div></textarea>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<textarea><div>text</section></textarea>"
+    ],
+    "cursor": [
+      1,
+      21
+    ]
+  },
+  {
+    "id": "L019",
+    "label": "html rename literal name closing=False: <title><div>text</div></t",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<title><div>text</div></title>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<title><section>text</div></title>"
+    ],
+    "cursor": [
+      1,
+      8
+    ]
+  },
+  {
+    "id": "L020",
+    "label": "html rename literal name closing=True: <title><div>text</div></t",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<title><div>text</div></title>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<title><div>text</section></title>"
+    ],
+    "cursor": [
+      1,
+      18
+    ]
+  },
+  {
+    "id": "L034",
+    "label": "vue rename literal name closing=False: <template><div>{{ \"<span>",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><div>{{ \"<span>text</span>\" }}</div></template>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><div>{{ \"<section>text</span>\" }}</div></template>"
+    ],
+    "cursor": [
+      1,
+      20
+    ]
+  },
+  {
+    "id": "L035",
+    "label": "vue rename literal name closing=True: <template><div>{{ \"<span>",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><div>{{ \"<span>text</span>\" }}</div></template>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><div>{{ \"<span>text</section>\" }}</div></template>"
+    ],
+    "cursor": [
+      1,
+      31
+    ]
+  }
+]

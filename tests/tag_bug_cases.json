@@ -1,0 +1,1457 @@
+[
+  {
+    "id": "C050",
+    "label": "typescriptreact: capitalized Input component",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<Input>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Input></Input>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C051",
+    "label": "typescriptreact: capitalized Link component",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<Link>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Link></Link>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C052",
+    "label": "typescriptreact: capitalized Meta component",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<Meta>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Meta></Meta>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C053",
+    "label": "typescriptreact: capitalized Source component",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      ""
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<Source>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Source></Source>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C055",
+    "label": "typescriptreact: outer rename around Input",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Box><Input></Input></Box>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Panel><Input></Input></Panel>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "E017",
+    "label": "TSX generic component <string>",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Select<string>"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Select<string>></Select>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "E019",
+    "label": "TSX generic component closer rename <string>",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Select<string>></Select>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Picker",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Picker<string>></Picker>"
+    ],
+    "cursor": [
+      1,
+      18
+    ]
+  },
+  {
+    "id": "E022",
+    "label": "TSX generic component closer rename <Array<string>>",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Select<Array<string>>></Select>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Picker",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Picker<Array<string>>></Picker>"
+    ],
+    "cursor": [
+      1,
+      25
+    ]
+  },
+  {
+    "id": "C278",
+    "label": "vue conditional/interpolation rename",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<div>{{ \"<fake>\" }}</div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section>{{ \"<fake>\" }}</section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "E081",
+    "label": "vue expression string parent closer {{ a < b ? \"<one>\" : \"<two>\" }}",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main><div>{{ a < b ? \"<one>\" : \"<two>\" }}</div><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section><div>{{ a < b ? \"<one>\" : \"<two>\" }}</div><aside>end</aside></section>"
+    ],
+    "cursor": [
+      1,
+      68
+    ]
+  },
+  {
+    "id": "E082",
+    "label": "vue expression string inner opener {{ a < b ? \"<one>\" : \"<two>\" }}",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main><div>{{ a < b ? \"<one>\" : \"<two>\" }}</div><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>{{ a < b ? \"<one>\" : \"<two>\" }}</section><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "E029",
+    "label": "html child becomes ancestor span->div slow=False",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div><span>text</span><aside>end</aside></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "div",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div>text</div><aside>end</aside></div>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "C252",
+    "label": "html: nested name becomes ancestor name",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div><span></span></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "div",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div></div></div>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "E061",
+    "label": "vue child becomes ancestor span->div slow=False",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<div><span>text</span><aside>end</aside></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "div",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div>text</div><aside>end</aside></div>"
+    ],
+    "cursor": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "C108",
+    "label": "html: same child interrupted Insert session",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<di",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      },
+      {
+        "keys": "a"
+      },
+      {
+        "text": "v>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "C240",
+    "label": "html: paste child then finish",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<div"
+      },
+      {
+        "text": ">",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div></div></div>"
+    ],
+    "cursor": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "R102",
+    "label": "html same-name child from existing incomplete file",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div><div</div>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div><div></div></div>"
+    ],
+    "cursor": [
+      1,
+      9
+    ]
+  },
+  {
+    "id": "C015",
+    "label": "xml: closing rename",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section></section>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "R150",
+    "label": "xml change closing name using normal replace",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div></div>"
+    ],
+    "actions": [
+      {
+        "keys": "rs"
+      }
+    ],
+    "expected": [
+      "<siv></siv>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "Z014",
+    "label": "Svelte block <Card>plain</Card> closing",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<Card>plain</Card>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Panel>plain</Panel>"
+    ],
+    "cursor": [
+      1,
+      13
+    ]
+  },
+  {
+    "id": "Z002",
+    "label": "Svelte block {#if ok}<Card>text</Card>{/if} closing",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "{#if ok}<Card>text</Card>{/if}"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "{#if ok}<Panel>text</Panel>{/if}"
+    ],
+    "cursor": [
+      1,
+      20
+    ]
+  },
+  {
+    "id": "R001",
+    "label": "html preexisting literal attribute title=\"C:\\\"",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div title=\"C:\\\""
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div title=\"C:\\\"></div>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C079",
+    "label": "html: rename with attribute title=\"C:\\\"",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div title=\"C:\\\"></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section title=\"C:\\\"></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "R005",
+    "label": "xml preexisting literal attribute title=\"C:\\\"",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<div title=\"C:\\\""
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div title=\"C:\\\"></div>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "R003",
+    "label": "html preexisting literal attribute data-value={",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div data-value={"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div data-value={></div>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "C081",
+    "label": "html: rename with attribute data-value={",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div data-value={></div>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section data-value={></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "E001",
+    "label": "html slash ends unquoted attribute data-url=/",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div data-url=/"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div data-url=/></div>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "E002",
+    "label": "html slash in child attribute rename parent data-url=/",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><div data-url=/></div></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section><div data-url=/></div></section>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "E005",
+    "label": "html slash ends unquoted attribute data-value=x/",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div data-value=x/"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div data-value=x/></div>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "R011",
+    "label": "typescriptreact preexisting JSX value={/* \" */ value}",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Card value={/* \" */ value}"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Card value={/* \" */ value}></Card>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "R015",
+    "label": "typescriptreact preexisting JSX value={/\"/.test(x)}",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Card value={/\"/.test(x)}"
+    ],
+    "actions": [
+      {
+        "keys": "A"
+      },
+      {
+        "text": ">"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Card value={/\"/.test(x)}></Card>"
+    ],
+    "cursor": [
+      1,
+      0
+    ]
+  },
+  {
+    "id": "R012",
+    "label": "typescriptreact JSX lexical rename value={/* \" */ value}",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Card value={/* \" */ value}></Card>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Panel value={/* \" */ value}></Panel>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "R016",
+    "label": "typescriptreact JSX lexical rename value={/\"/.test(x)}",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<Card value={/\"/.test(x)}></Card>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<Panel value={/\"/.test(x)}></Panel>"
+    ],
+    "cursor": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "R063",
+    "label": "raw text textarea typing",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><textarea>text</textarea></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<b>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><textarea><b>text</textarea></main>"
+    ],
+    "cursor": [
+      1,
+      16
+    ]
+  },
+  {
+    "id": "R062",
+    "label": "raw text child textarea outer closer",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><textarea>text <fake> literal</textarea><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<section><textarea>text <fake> literal</textarea><aside>end</aside></section>"
+    ],
+    "cursor": [
+      1,
+      66
+    ]
+  },
+  {
+    "id": "C177",
+    "label": "HTML script regex/template closer: const re = /\"/;",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script>const re = /\"/;</script>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "style",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>const re = /\"/;</style>"
+    ],
+    "cursor": [
+      1,
+      25
+    ]
+  },
+  {
+    "id": "C178",
+    "label": "HTML script regex/template closer: const re = /'/;",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script>const re = /'/;</script>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "style",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>const re = /'/;</style>"
+    ],
+    "cursor": [
+      1,
+      25
+    ]
+  },
+  {
+    "id": "C179",
+    "label": "HTML script regex/template closer: const re = /`/;",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script>const re = /`/;</script>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "style",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>const re = /`/;</style>"
+    ],
+    "cursor": [
+      1,
+      25
+    ]
+  },
+  {
+    "id": "C180",
+    "label": "HTML script regex/template closer: const url = /https?:\\/\\//;",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script>const url = /https?:\\/\\//;</script>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "style",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>const url = /https?:\\/\\//;</style>"
+    ],
+    "cursor": [
+      1,
+      36
+    ]
+  },
+  {
+    "id": "C181",
+    "label": "HTML script regex/template closer: const re = /[/*]/;",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script>const re = /[/*]/;</script>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "style",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>const re = /[/*]/;</style>"
+    ],
+    "cursor": [
+      1,
+      28
+    ]
+  },
+  {
+    "id": "Z015",
+    "label": "html raw element script opener",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><script>const text = '<fake>';</script><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>const text = '<fake>';</section><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "Z017",
+    "label": "html raw element style opener",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><style>.x::after { content: '<fake>'; }</style><aside>end</aside></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section>.x::after { content: '<fake>'; }</section><aside>end</aside></main>"
+    ],
+    "cursor": [
+      1,
+      7
+    ]
+  },
+  {
+    "id": "R094",
+    "label": "optional end tags ul to section closing",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><ul><li>a<li>b</ul><p>tail</p></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section><li>a<li>b</section><p>tail</p></main>"
+    ],
+    "cursor": [
+      1,
+      22
+    ]
+  },
+  {
+    "id": "R090",
+    "label": "optional end tags dl to section closing",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><dl><dt>a<dd>b</dl></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section><dt>a<dd>b</section></main>"
+    ],
+    "cursor": [
+      1,
+      22
+    ]
+  },
+  {
+    "id": "R092",
+    "label": "optional end tags table to section closing",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><table><tr><td>a<td>b</table></main>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><section><tr><td>a<td>b</section></main>"
+    ],
+    "cursor": [
+      1,
+      29
+    ]
+  },
+  {
+    "id": "Z028",
+    "label": "HTML Enter <div title=\"a > b\">",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div title=\"a > b\"></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i<CR>"
+      },
+      {
+        "text": "content"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div title=\"a > b\">",
+      "  content",
+      "</div>"
+    ],
+    "cursor": [
+      1,
+      19
+    ]
+  },
+  {
+    "id": "Z029",
+    "label": "HTML Enter <div title=\"a < b\">",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<div title=\"a < b\"></div>"
+    ],
+    "actions": [
+      {
+        "keys": "i<CR>"
+      },
+      {
+        "text": "content"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<div title=\"a < b\">",
+      "  content",
+      "</div>"
+    ],
+    "cursor": [
+      1,
+      19
+    ]
+  },
+  {
+    "id": "X038",
+    "label": "Vue SFC rename Input closer",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template>",
+      "  <main class=\"dashboard\">",
+      "    <header><h1>{{ title }}</h1></header>",
+      "    <section v-for=\"group in groups\" :key=\"group.id\">",
+      "      <Card v-if=\"group.enabled\" :items=\"group.items\" @click=\"select(group)\">",
+      "        <template #header=\"{ item }\"><span>{{ item.name }}</span></template>",
+      "        <ul><li v-for=\"item in group.items\" :key=\"item.id\"><a :href=\"item.url\">{{ item.name }}</a></li></ul>",
+      "        <Input><Label>Query</Label></Input>",
+      "      </Card>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</template>",
+      "<script setup lang=\"ts\">",
+      "const title = '<section>';",
+      "const groups = [{ id: 'x', enabled: true, items: [] }];",
+      "const select = (group: unknown) => group;",
+      "</script>",
+      "<style scoped>",
+      "main::after { content: '<footer>'; }",
+      "</style>"
+    ],
+    "cursor": [
+      8,
+      37
+    ],
+    "expected": [
+      "<template>",
+      "  <main class=\"dashboard\">",
+      "    <header><h1>{{ title }}</h1></header>",
+      "    <section v-for=\"group in groups\" :key=\"group.id\">",
+      "      <Card v-if=\"group.enabled\" :items=\"group.items\" @click=\"select(group)\">",
+      "        <template #header=\"{ item }\"><span>{{ item.name }}</span></template>",
+      "        <ul><li v-for=\"item in group.items\" :key=\"item.id\"><a :href=\"item.url\">{{ item.name }}</a></li></ul>",
+      "        <Panel><Label>Query</Label></Panel>",
+      "      </Card>",
+      "    </section>",
+      "    <footer>done</footer>",
+      "  </main>",
+      "</template>",
+      "<script setup lang=\"ts\">",
+      "const title = '<section>';",
+      "const groups = [{ id: 'x', enabled: true, items: [] }];",
+      "const select = (group: unknown) => group;",
+      "</script>",
+      "<style scoped>",
+      "main::after { content: '<footer>'; }",
+      "</style>"
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "Panel",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ]
+  },
+  {
+    "id": "Z034",
+    "label": "typescriptreact new different tag name stopped before >",
+    "filetype": "typescriptreact",
+    "extension": "tsx",
+    "before": [
+      "<main><div></div></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><div><section</div></main>"
+    ],
+    "cursor": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": "C161",
+    "label": "HTML script literal content",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<script></script>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<b>",
+        "slow": false
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<script><b></script>"
+    ],
+    "cursor": [
+      1,
+      8
+    ]
+  },
+  {
+    "id": "R081",
+    "label": "raw text script typing",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><script>text</script></main>"
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<b>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><script><b>text</script></main>"
+    ],
+    "cursor": [
+      1,
+      14
+    ]
+  }
+]

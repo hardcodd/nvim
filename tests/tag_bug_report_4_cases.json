@@ -1,0 +1,5670 @@
+[
+  {
+    "id": "T4_0001",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<section>text</span>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=False typed"
+  },
+  {
+    "id": "T4_0002",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<section>text</span>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=False paste"
+  },
+  {
+    "id": "T4_0003",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<section>text</span>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=False stream"
+  },
+  {
+    "id": "T4_0004",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<span>text</section>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=True typed"
+  },
+  {
+    "id": "T4_0005",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<span>text</section>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=True paste"
+  },
+  {
+    "id": "T4_0006",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><main>{{ `",
+      "<span>text</span>",
+      "` }}</main></template>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><main>{{ `",
+      "<span>text</section>",
+      "` }}</main></template>"
+    ],
+    "label": "literal vue source=0 close=True stream"
+  },
+  {
+    "id": "T4_0007",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      3
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <section>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=False typed"
+  },
+  {
+    "id": "T4_0008",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      3
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <section>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=False paste"
+  },
+  {
+    "id": "T4_0009",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      3
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <section>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=False stream"
+  },
+  {
+    "id": "T4_0010",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      14
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <span>text</section>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=True typed"
+  },
+  {
+    "id": "T4_0011",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      14
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <span>text</section>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=True paste"
+  },
+  {
+    "id": "T4_0012",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{",
+      " `first",
+      "  <span>text</span>",
+      "last`",
+      "}}</main>"
+    ],
+    "cursor": [
+      3,
+      14
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{",
+      " `first",
+      "  <span>text</section>",
+      "last`",
+      "}}</main>"
+    ],
+    "label": "literal vue source=1 close=True stream"
+  },
+  {
+    "id": "T4_0013",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=False typed"
+  },
+  {
+    "id": "T4_0014",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=False paste"
+  },
+  {
+    "id": "T4_0015",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=False stream"
+  },
+  {
+    "id": "T4_0016",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=True typed"
+  },
+  {
+    "id": "T4_0017",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=True paste"
+  },
+  {
+    "id": "T4_0018",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ \"first\\",
+      "<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"first\\",
+      "<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=2 close=True stream"
+  },
+  {
+    "id": "T4_0043",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=False typed"
+  },
+  {
+    "id": "T4_0044",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=False paste"
+  },
+  {
+    "id": "T4_0045",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=False stream"
+  },
+  {
+    "id": "T4_0046",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=True typed"
+  },
+  {
+    "id": "T4_0047",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=True paste"
+  },
+  {
+    "id": "T4_0048",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=7 close=True stream"
+  },
+  {
+    "id": "T4_0049",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      26
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=False typed"
+  },
+  {
+    "id": "T4_0050",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      26
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=False paste"
+  },
+  {
+    "id": "T4_0051",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      26
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=False stream"
+  },
+  {
+    "id": "T4_0052",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      37
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=True typed"
+  },
+  {
+    "id": "T4_0053",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      37
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=True paste"
+  },
+  {
+    "id": "T4_0054",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      37
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /}}/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=8 close=True stream"
+  },
+  {
+    "id": "T4_0055",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      25
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=False typed"
+  },
+  {
+    "id": "T4_0056",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      25
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=False paste"
+  },
+  {
+    "id": "T4_0057",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      25
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<section>text</span>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=False stream"
+  },
+  {
+    "id": "T4_0058",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      36
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=True typed"
+  },
+  {
+    "id": "T4_0059",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      36
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=True paste"
+  },
+  {
+    "id": "T4_0060",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</span>\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      36
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<span>text</section>\" : \"\" }}</main>"
+    ],
+    "label": "literal vue source=9 close=True stream"
+  },
+  {
+    "id": "T4_0061",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<section>text</span>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=False typed"
+  },
+  {
+    "id": "T4_0062",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<section>text</span>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=False paste"
+  },
+  {
+    "id": "T4_0063",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<section>text</span>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=False stream"
+  },
+  {
+    "id": "T4_0064",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<span>text</section>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=True typed"
+  },
+  {
+    "id": "T4_0065",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<span>text</section>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=True paste"
+  },
+  {
+    "id": "T4_0066",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ fn({x: \"<span>text</span>\"}) }}</main>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ fn({x: \"<span>text</section>\"}) }}</main>"
+    ],
+    "label": "literal vue source=10 close=True stream"
+  },
+  {
+    "id": "T4_0079",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<section>text</span>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=False typed"
+  },
+  {
+    "id": "T4_0080",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<section>text</span>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=False paste"
+  },
+  {
+    "id": "T4_0081",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<section>text</span>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=False stream"
+  },
+  {
+    "id": "T4_0082",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<span>text</section>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=True typed"
+  },
+  {
+    "id": "T4_0083",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<span>text</section>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=True paste"
+  },
+  {
+    "id": "T4_0084",
+    "filetype": "svelte",
+    "extension": "svelte",
+    "before": [
+      "<main>{`first",
+      "<span>text</span>",
+      "last`}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{`first",
+      "<span>text</section>",
+      "last`}</main>"
+    ],
+    "label": "literal svelte source=0 close=True stream"
+  },
+  {
+    "id": "T4_0103",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ \"x\" }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      27
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ \"x\" }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ \"x\" }}</p>' close=False"
+  },
+  {
+    "id": "T4_0104",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ \"x\" }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      38
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ \"x\" }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ \"x\" }}</p>' close=True"
+  },
+  {
+    "id": "T4_0105",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ `first",
+      "last` }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      2,
+      13
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ `first",
+      "last` }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ `first\\nlast` }}</p>' close=False"
+  },
+  {
+    "id": "T4_0106",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ `first",
+      "last` }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      2,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ `first",
+      "last` }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ `first\\nlast` }}</p>' close=True"
+  },
+  {
+    "id": "T4_0107",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" --><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" --><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<!-- {{ \" -->' close=False"
+  },
+  {
+    "id": "T4_0108",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" --><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      35
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" --><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<!-- {{ \" -->' close=True"
+  },
+  {
+    "id": "T4_0109",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p title=\"{{ x }}\">text</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      38
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p title=\"{{ x }}\">text</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p title=\"{{ x }}\">text</p>' close=False"
+  },
+  {
+    "id": "T4_0110",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p title=\"{{ x }}\">text</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      49
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p title=\"{{ x }}\">text</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p title=\"{{ x }}\">text</p>' close=True"
+  },
+  {
+    "id": "T4_0111",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><script>const x = \"{{\";</script><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      43
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><script>const x = \"{{\";</script><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<script>const x = \"{{\";</script>' close=False"
+  },
+  {
+    "id": "T4_0112",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><script>const x = \"{{\";</script><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      54
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><script>const x = \"{{\";</script><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<script>const x = \"{{\";</script>' close=True"
+  },
+  {
+    "id": "T4_0113",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ /}}/.test(x) }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      36
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ /}}/.test(x) }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ /}}/.test(x) }}</p>' close=False"
+  },
+  {
+    "id": "T4_0114",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><p>{{ /}}/.test(x) }}</p><span>text</span></template>"
+    ],
+    "cursor": [
+      1,
+      47
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><p>{{ /}}/.test(x) }}</p><section>text</section></template>"
+    ],
+    "label": "Vue real tag after '<p>{{ /}}/.test(x) }}</p>' close=True"
+  },
+  {
+    "id": "E4_0001",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render <span>text</span> ?>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render <section>text</span> ?>",
+      "<root/>"
+    ],
+    "label": "literal xml 0 close=False type"
+  },
+  {
+    "id": "E4_0002",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render <span>text</span> ?>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render <section>text</span> ?>",
+      "<root/>"
+    ],
+    "label": "literal xml 0 close=False paste"
+  },
+  {
+    "id": "E4_0003",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render <span>text</span> ?>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      21
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render <span>text</section> ?>",
+      "<root/>"
+    ],
+    "label": "literal xml 0 close=True type"
+  },
+  {
+    "id": "E4_0004",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render <span>text</span> ?>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      21
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render <span>text</section> ?>",
+      "<root/>"
+    ],
+    "label": "literal xml 0 close=True paste"
+  },
+  {
+    "id": "E4_0005",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render <span>text</span> ?></root>"
+    ],
+    "cursor": [
+      1,
+      16
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <section>text</span> ?></root>"
+    ],
+    "label": "literal xml 1 close=False type"
+  },
+  {
+    "id": "E4_0006",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render <span>text</span> ?></root>"
+    ],
+    "cursor": [
+      1,
+      16
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <section>text</span> ?></root>"
+    ],
+    "label": "literal xml 1 close=False paste"
+  },
+  {
+    "id": "E4_0007",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render <span>text</span> ?></root>"
+    ],
+    "cursor": [
+      1,
+      27
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <span>text</section> ?></root>"
+    ],
+    "label": "literal xml 1 close=True type"
+  },
+  {
+    "id": "E4_0008",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render <span>text</span> ?></root>"
+    ],
+    "cursor": [
+      1,
+      27
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <span>text</section> ?></root>"
+    ],
+    "label": "literal xml 1 close=True paste"
+  },
+  {
+    "id": "E4_0009",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render",
+      "<span>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render",
+      "<section>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "label": "literal xml 2 close=False type"
+  },
+  {
+    "id": "E4_0010",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render",
+      "<span>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render",
+      "<section>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "label": "literal xml 2 close=False paste"
+  },
+  {
+    "id": "E4_0011",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render",
+      "<span>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render",
+      "<span>text</section>",
+      "?>",
+      "<root/>"
+    ],
+    "label": "literal xml 2 close=True type"
+  },
+  {
+    "id": "E4_0012",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render",
+      "<span>text</span>",
+      "?>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render",
+      "<span>text</section>",
+      "?>",
+      "<root/>"
+    ],
+    "label": "literal xml 2 close=True paste"
+  },
+  {
+    "id": "E4_0013",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</span>\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      34
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<section>text</span>\">]>",
+      "<root/>"
+    ],
+    "label": "literal xml 3 close=False type"
+  },
+  {
+    "id": "E4_0014",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</span>\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      34
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<section>text</span>\">]>",
+      "<root/>"
+    ],
+    "label": "literal xml 3 close=False paste"
+  },
+  {
+    "id": "E4_0015",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</span>\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      45
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</section>\">]>",
+      "<root/>"
+    ],
+    "label": "literal xml 3 close=True type"
+  },
+  {
+    "id": "E4_0016",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</span>\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      45
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>text</section>\">]>",
+      "<root/>"
+    ],
+    "label": "literal xml 3 close=True paste"
+  },
+  {
+    "id": "E4_0017",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<section>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "label": "literal xml 4 close=False type"
+  },
+  {
+    "id": "E4_0018",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<section>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "label": "literal xml 4 close=False paste"
+  },
+  {
+    "id": "E4_0019",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</section>\">",
+      "]>",
+      "<root/>"
+    ],
+    "label": "literal xml 4 close=True type"
+  },
+  {
+    "id": "E4_0020",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</span>\">",
+      "]>",
+      "<root/>"
+    ],
+    "cursor": [
+      2,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [",
+      "<!ENTITY sample \"<span>text</section>\">",
+      "]>",
+      "<root/>"
+    ],
+    "label": "literal xml 4 close=True paste"
+  },
+  {
+    "id": "E4_0021",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{# <span>text</span> #}</main>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <section>text</span> #}</main>"
+    ],
+    "label": "literal htmldjango 5 close=False type"
+  },
+  {
+    "id": "E4_0022",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{# <span>text</span> #}</main>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <section>text</span> #}</main>"
+    ],
+    "label": "literal htmldjango 5 close=False paste"
+  },
+  {
+    "id": "E4_0023",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{# <span>text</span> #}</main>"
+    ],
+    "cursor": [
+      1,
+      21
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <span>text</section> #}</main>"
+    ],
+    "label": "literal htmldjango 5 close=True type"
+  },
+  {
+    "id": "E4_0024",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{# <span>text</span> #}</main>"
+    ],
+    "cursor": [
+      1,
+      21
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <span>text</section> #}</main>"
+    ],
+    "label": "literal htmldjango 5 close=True paste"
+  },
+  {
+    "id": "E4_0025",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}<span>text</span>{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      20
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<section>text</span>{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 6 close=False type"
+  },
+  {
+    "id": "E4_0026",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}<span>text</span>{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      20
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<section>text</span>{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 6 close=False paste"
+  },
+  {
+    "id": "E4_0027",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}<span>text</span>{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<span>text</section>{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 6 close=True type"
+  },
+  {
+    "id": "E4_0028",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}<span>text</span>{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<span>text</section>{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 6 close=True paste"
+  },
+  {
+    "id": "E4_0029",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}",
+      "<span>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}",
+      "<section>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 7 close=False type"
+  },
+  {
+    "id": "E4_0030",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}",
+      "<span>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}",
+      "<section>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 7 close=False paste"
+  },
+  {
+    "id": "E4_0031",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}",
+      "<span>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}",
+      "<span>text</section>",
+      "{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 7 close=True type"
+  },
+  {
+    "id": "E4_0032",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}",
+      "<span>text</span>",
+      "{% endcomment %}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}",
+      "<span>text</section>",
+      "{% endcomment %}</main>"
+    ],
+    "label": "literal htmldjango 7 close=True paste"
+  },
+  {
+    "id": "E4_0033",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal htmldjango 8 close=False type"
+  },
+  {
+    "id": "E4_0034",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal htmldjango 8 close=False paste"
+  },
+  {
+    "id": "E4_0035",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal htmldjango 8 close=True type"
+  },
+  {
+    "id": "E4_0036",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal htmldjango 8 close=True paste"
+  },
+  {
+    "id": "E4_0037",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% with sample=\"<span>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "cursor": [
+      1,
+      23
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% with sample=\"<section>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "label": "literal htmldjango 9 close=False type"
+  },
+  {
+    "id": "E4_0038",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% with sample=\"<span>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "cursor": [
+      1,
+      23
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% with sample=\"<section>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "label": "literal htmldjango 9 close=False paste"
+  },
+  {
+    "id": "E4_0039",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% with sample=\"<span>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "cursor": [
+      1,
+      34
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% with sample=\"<span>text</section>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "label": "literal htmldjango 9 close=True type"
+  },
+  {
+    "id": "E4_0040",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% with sample=\"<span>text</span>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "cursor": [
+      1,
+      34
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% with sample=\"<span>text</section>\" %}{{ sample }}{% endwith %}</main>"
+    ],
+    "label": "literal htmldjango 9 close=True paste"
+  },
+  {
+    "id": "E4_0041",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><!--[if IE]><span>text</span><![endif]--></main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><!--[if IE]><section>text</span><![endif]--></main>"
+    ],
+    "label": "literal html 10 close=False type"
+  },
+  {
+    "id": "E4_0042",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><!--[if IE]><span>text</span><![endif]--></main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><!--[if IE]><section>text</span><![endif]--></main>"
+    ],
+    "label": "literal html 10 close=False paste"
+  },
+  {
+    "id": "E4_0043",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><!--[if IE]><span>text</span><![endif]--></main>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><!--[if IE]><span>text</section><![endif]--></main>"
+    ],
+    "label": "literal html 10 close=True type"
+  },
+  {
+    "id": "E4_0044",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<main><!--[if IE]><span>text</span><![endif]--></main>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main><!--[if IE]><span>text</section><![endif]--></main>"
+    ],
+    "label": "literal html 10 close=True paste"
+  },
+  {
+    "id": "E4_0045",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" --><main></main></template>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" --><main><span></span></main></template>"
+    ],
+    "label": "Vue autoclose after '<!-- {{ \" -->' newline=''"
+  },
+  {
+    "id": "E4_0046",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \" -->' newline='' close=False"
+  },
+  {
+    "id": "E4_0047",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      41
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \" -->' newline='' close=True"
+  },
+  {
+    "id": "E4_0049",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \" -->' newline='\\n' close=False"
+  },
+  {
+    "id": "E4_0050",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \" -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \" -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \" -->' newline='\\n' close=True"
+  },
+  {
+    "id": "E4_0051",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ` --><main></main></template>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ` --><main><span></span></main></template>"
+    ],
+    "label": "Vue autoclose after '<!-- {{ ` -->' newline=''"
+  },
+  {
+    "id": "E4_0052",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ` --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ` --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ ` -->' newline='' close=False"
+  },
+  {
+    "id": "E4_0053",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ` --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      41
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ` --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ ` -->' newline='' close=True"
+  },
+  {
+    "id": "E4_0055",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ` -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ` -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ ` -->' newline='\\n' close=False"
+  },
+  {
+    "id": "E4_0056",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ` -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ` -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ ` -->' newline='\\n' close=True"
+  },
+  {
+    "id": "E4_0057",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ' --><main></main></template>"
+    ],
+    "cursor": [
+      1,
+      29
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ' --><main><span></span></main></template>"
+    ],
+    "label": "Vue autoclose after \"<!-- {{ ' -->\" newline=''"
+  },
+  {
+    "id": "E4_0058",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ' --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      30
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ' --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after \"<!-- {{ ' -->\" newline='' close=False"
+  },
+  {
+    "id": "E4_0059",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ' --><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      1,
+      41
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ' --><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after \"<!-- {{ ' -->\" newline='' close=True"
+  },
+  {
+    "id": "E4_0061",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ' -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ' -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after \"<!-- {{ ' -->\" newline='\\n' close=False"
+  },
+  {
+    "id": "E4_0062",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ ' -->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      2,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ ' -->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after \"<!-- {{ ' -->\" newline='\\n' close=True"
+  },
+  {
+    "id": "E4_0063",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main></main></template>"
+    ],
+    "cursor": [
+      3,
+      9
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main><span></span></main></template>"
+    ],
+    "label": "Vue autoclose after '<!-- {{ \"\\ncontinued\\n-->' newline=''"
+  },
+  {
+    "id": "E4_0064",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      3,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \"\\ncontinued\\n-->' newline='' close=False"
+  },
+  {
+    "id": "E4_0065",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      3,
+      21
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \"",
+      "continued",
+      "--><main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \"\\ncontinued\\n-->' newline='' close=True"
+  },
+  {
+    "id": "E4_0067",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \"",
+      "continued",
+      "-->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      4,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \"",
+      "continued",
+      "-->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \"\\ncontinued\\n-->' newline='\\n' close=False"
+  },
+  {
+    "id": "E4_0068",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<template><!-- {{ \"",
+      "continued",
+      "-->",
+      "<main><span>text</span></main></template>"
+    ],
+    "cursor": [
+      4,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<template><!-- {{ \"",
+      "continued",
+      "-->",
+      "<main><section>text</section></main></template>"
+    ],
+    "label": "Vue nested rename after '<!-- {{ \"\\ncontinued\\n-->' newline='\\n' close=True"
+  },
+  {
+    "id": "C4_0001",
+    "label": "xml literal autoclose 0 typed",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render  ?></root>"
+    ],
+    "cursor": [
+      1,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <span> ?></root>"
+    ]
+  },
+  {
+    "id": "C4_0002",
+    "label": "xml literal autoclose 0 paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><?render  ?></root>"
+    ],
+    "cursor": [
+      1,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><?render <span> ?></root>"
+    ]
+  },
+  {
+    "id": "C4_0003",
+    "label": "xml literal autoclose 1 typed",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      33
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>\">]>",
+      "<root/>"
+    ]
+  },
+  {
+    "id": "C4_0004",
+    "label": "xml literal autoclose 1 paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<!DOCTYPE root [<!ENTITY sample \"\">]>",
+      "<root/>"
+    ],
+    "cursor": [
+      1,
+      33
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<!DOCTYPE root [<!ENTITY sample \"<span>\">]>",
+      "<root/>"
+    ]
+  },
+  {
+    "id": "C4_0005",
+    "label": "htmldjango literal autoclose 2 typed",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{#  #}</main>"
+    ],
+    "cursor": [
+      1,
+      9
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <span> #}</main>"
+    ]
+  },
+  {
+    "id": "C4_0006",
+    "label": "htmldjango literal autoclose 2 paste",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{#  #}</main>"
+    ],
+    "cursor": [
+      1,
+      9
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{# <span> #}</main>"
+    ]
+  },
+  {
+    "id": "C4_0007",
+    "label": "htmldjango literal autoclose 3 typed",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<span>{% endcomment %}</main>"
+    ]
+  },
+  {
+    "id": "C4_0008",
+    "label": "htmldjango literal autoclose 3 paste",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}{% endcomment %}</main>"
+    ],
+    "cursor": [
+      1,
+      19
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<span>{% endcomment %}</main>"
+    ]
+  },
+  {
+    "id": "C4_0009",
+    "label": "vue literal autoclose 4 typed",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "text ",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      5
+    ],
+    "actions": [
+      {
+        "keys": "a"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "  text <span>",
+      "last` }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0010",
+    "label": "vue literal autoclose 4 paste",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "text ",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      5
+    ],
+    "actions": [
+      {
+        "keys": "a"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "text <span>",
+      "last` }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0011",
+    "label": "vue literal autoclose 5 typed",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<span>\" }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0012",
+    "label": "vue literal autoclose 5 paste",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* \" */ \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      18
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* \" */ \"<span>\" }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0013",
+    "label": "vue literal autoclose 6 typed",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<span>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0014",
+    "label": "vue literal autoclose 6 paste",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /\"/.test(x) ? \"\" : \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /\"/.test(x) ? \"<span>\" : \"\" }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0015",
+    "label": "xml literal autoclose 7 typed",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><!--  --></root>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><!-- <span> --></root>"
+    ]
+  },
+  {
+    "id": "C4_0016",
+    "label": "xml literal autoclose 7 paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><!--  --></root>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><!-- <span> --></root>"
+    ]
+  },
+  {
+    "id": "C4_0017",
+    "label": "xml literal autoclose 8 typed",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><![CDATA[]]></root>"
+    ],
+    "cursor": [
+      1,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><![CDATA[<span>]]></root>"
+    ]
+  },
+  {
+    "id": "C4_0018",
+    "label": "xml literal autoclose 8 paste",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<root><![CDATA[]]></root>"
+    ],
+    "cursor": [
+      1,
+      15
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<root><![CDATA[<span>]]></root>"
+    ]
+  },
+  {
+    "id": "C4_0019",
+    "label": "htmldjango literal autoclose 9 typed",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<span>\" }}</main>"
+    ]
+  },
+  {
+    "id": "C4_0020",
+    "label": "htmldjango literal autoclose 9 paste",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{{ \"\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      10
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "paste": "<span>"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ \"<span>\" }}</main>"
+    ]
+  },
+  {
+    "id": "W4_0001",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=0 closing=False paste=False",
+    "before": [
+      "<style>.x::before { content: \"<span>text</span>\"; }</style>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>.x::before { content: \"<section>text</span>\"; }</style>"
+    ]
+  },
+  {
+    "id": "W4_0002",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=0 closing=False paste=True",
+    "before": [
+      "<style>.x::before { content: \"<span>text</span>\"; }</style>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>.x::before { content: \"<section>text</span>\"; }</style>"
+    ]
+  },
+  {
+    "id": "W4_0003",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=0 closing=True paste=False",
+    "before": [
+      "<style>.x::before { content: \"<span>text</span>\"; }</style>"
+    ],
+    "cursor": [
+      1,
+      42
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>.x::before { content: \"<span>text</section>\"; }</style>"
+    ]
+  },
+  {
+    "id": "W4_0004",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=0 closing=True paste=True",
+    "before": [
+      "<style>.x::before { content: \"<span>text</span>\"; }</style>"
+    ],
+    "cursor": [
+      1,
+      42
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>.x::before { content: \"<span>text</section>\"; }</style>"
+    ]
+  },
+  {
+    "id": "W4_0005",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=1 closing=False paste=False",
+    "before": [
+      "<style>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      ".x::before { content: \"<section>text</span>\"; }",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0006",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=1 closing=False paste=True",
+    "before": [
+      "<style>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      24
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      ".x::before { content: \"<section>text</span>\"; }",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0007",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=1 closing=True paste=False",
+    "before": [
+      "<style>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      35
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      ".x::before { content: \"<span>text</section>\"; }",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0008",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=1 closing=True paste=True",
+    "before": [
+      "<style>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      35
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      ".x::before { content: \"<span>text</section>\"; }",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0009",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=2 closing=False paste=False",
+    "before": [
+      "<style>/* <span>text</span> */</style>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>/* <section>text</span> */</style>"
+    ]
+  },
+  {
+    "id": "W4_0010",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=2 closing=False paste=True",
+    "before": [
+      "<style>/* <span>text</span> */</style>"
+    ],
+    "cursor": [
+      1,
+      11
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>/* <section>text</span> */</style>"
+    ]
+  },
+  {
+    "id": "W4_0011",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=2 closing=True paste=False",
+    "before": [
+      "<style>/* <span>text</span> */</style>"
+    ],
+    "cursor": [
+      1,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>/* <span>text</section> */</style>"
+    ]
+  },
+  {
+    "id": "W4_0012",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=2 closing=True paste=True",
+    "before": [
+      "<style>/* <span>text</span> */</style>"
+    ],
+    "cursor": [
+      1,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>/* <span>text</section> */</style>"
+    ]
+  },
+  {
+    "id": "W4_0013",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=3 closing=False paste=False",
+    "before": [
+      "<style>",
+      "<span>text</span>",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      "<section>text</span>",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0014",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=3 closing=False paste=True",
+    "before": [
+      "<style>",
+      "<span>text</span>",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      "<section>text</span>",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0015",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=3 closing=True paste=False",
+    "before": [
+      "<style>",
+      "<span>text</span>",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      "<span>text</section>",
+      "</style>"
+    ]
+  },
+  {
+    "id": "W4_0016",
+    "filetype": "html",
+    "extension": "html",
+    "label": "raw HTML sample=3 closing=True paste=True",
+    "before": [
+      "<style>",
+      "<span>text</span>",
+      "</style>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section"
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<style>",
+      "<span>text</section>",
+      "</style>"
+    ]
+  },
+  {
+    "id": "T4_0019",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<section>text</span>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=False typed"
+  },
+  {
+    "id": "T4_0020",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<section>text</span>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=False paste"
+  },
+  {
+    "id": "T4_0021",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<section>text</span>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=False stream"
+  },
+  {
+    "id": "T4_0022",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<span>text</section>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=True typed"
+  },
+  {
+    "id": "T4_0023",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<span>text</section>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=True paste"
+  },
+  {
+    "id": "T4_0024",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ 'first\\",
+      "<span>text</span>' }}</main>"
+    ],
+    "cursor": [
+      2,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ 'first\\",
+      "<span>text</section>' }}</main>"
+    ],
+    "label": "literal vue source=3 close=True stream"
+  },
+  {
+    "id": "T4_0025",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<section title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=False typed"
+  },
+  {
+    "id": "T4_0026",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<section title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=False paste"
+  },
+  {
+    "id": "T4_0027",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<section title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=False stream"
+  },
+  {
+    "id": "T4_0028",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=True typed"
+  },
+  {
+    "id": "T4_0029",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=True paste"
+  },
+  {
+    "id": "T4_0030",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      2,
+      22
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "<span title=\"x\">text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=4 close=True stream"
+  },
+  {
+    "id": "T4_0031",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<section>text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=False typed"
+  },
+  {
+    "id": "T4_0032",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<section>text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=False paste"
+  },
+  {
+    "id": "T4_0033",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      1
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<section>text</span>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=False stream"
+  },
+  {
+    "id": "T4_0034",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=True typed"
+  },
+  {
+    "id": "T4_0035",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=True paste"
+  },
+  {
+    "id": "T4_0036",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</span>",
+      "last` }}</main>"
+    ],
+    "cursor": [
+      3,
+      12
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ `first",
+      "{{ fake }}",
+      "<span>text</section>",
+      "last` }}</main>"
+    ],
+    "label": "literal vue source=5 close=True stream"
+  },
+  {
+    "id": "T4_0037",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      20
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=False typed"
+  },
+  {
+    "id": "T4_0038",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      20
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=False paste"
+  },
+  {
+    "id": "T4_0039",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      20
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<section>text</span>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=False stream"
+  },
+  {
+    "id": "T4_0040",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=True typed"
+  },
+  {
+    "id": "T4_0041",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "section",
+        "phase": -1
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=True paste"
+  },
+  {
+    "id": "T4_0042",
+    "filetype": "vue",
+    "extension": "vue",
+    "before": [
+      "<main>{{ /* }} */ \"<span>text</span>\" }}</main>"
+    ],
+    "cursor": [
+      1,
+      31
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "paste": "sec",
+        "phase": 1
+      },
+      {
+        "paste": "tion",
+        "phase": 3
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{{ /* }} */ \"<span>text</section>\" }}</main>"
+    ],
+    "label": "literal vue source=6 close=True stream"
+  },
+  {
+    "id": "B4-xml-real-tag-after-PI",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render <span>literal</span> ?>",
+      "<root><span>real</span></root>"
+    ],
+    "cursor": [
+      2,
+      7
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render <span>literal</span> ?>",
+      "<root><section>real</section></root>"
+    ]
+  },
+  {
+    "id": "B4-xml-autoclose-after-PI",
+    "filetype": "xml",
+    "extension": "xml",
+    "before": [
+      "<?render text ?>",
+      "<root></root>"
+    ],
+    "cursor": [
+      2,
+      6
+    ],
+    "actions": [
+      {
+        "keys": "i"
+      },
+      {
+        "text": "<span>",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<?render text ?>",
+      "<root><span></span></root>"
+    ]
+  },
+  {
+    "id": "B4-django-real-tag-after-comment",
+    "filetype": "htmldjango",
+    "extension": "html",
+    "before": [
+      "<main>{% comment %}<span>literal</span>{% endcomment %}<span>real</span></main>"
+    ],
+    "cursor": [
+      1,
+      56
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "section",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<main>{% comment %}<span>literal</span>{% endcomment %}<section>real</section></main>"
+    ]
+  },
+  {
+    "id": "B4-style-real-closer",
+    "filetype": "html",
+    "extension": "html",
+    "before": [
+      "<style>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</style>"
+    ],
+    "cursor": [
+      3,
+      2
+    ],
+    "actions": [
+      {
+        "keys": "ciw"
+      },
+      {
+        "text": "article",
+        "slow": true
+      },
+      {
+        "keys": "<Esc>"
+      }
+    ],
+    "expected": [
+      "<article>",
+      ".x::before { content: \"<span>text</span>\"; }",
+      "</article>"
+    ]
+  }
+]
