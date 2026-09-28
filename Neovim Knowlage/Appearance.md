@@ -1,5 +1,12 @@
 # Appearance
 
+Контраст цветных плашек `TODO:` и `FIXME:` в Latte и Mocha описан в
+[[Комментарии]].
+
+После изменения `custom_highlights` в `functions.theme` выполни
+`:CatppuccinCompile` и перезапусти Neovim, чтобы обновить скомпилированный
+кэш темы.
+
 The configuration uses [Catppuccin v2.0.0](https://github.com/catppuccin/nvim/tree/v2.0.0):
 light Latte and dark Mocha. The version and revision are pinned in the plugin
 declaration and `lazy-lock.json`. `lazy.nvim` downloads the theme on first

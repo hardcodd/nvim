@@ -1,5 +1,8 @@
 # Key mappings
 
+Клавиши для построчных и блочных комментариев, а также поиска `TODO:`
+перечислены в [[Комментарии]].
+
 The leader is `Space`. Mappings owned by this configuration live in
 `lua/keymaps.lua`; `paired-tags.nvim` maps `>` and `Enter` for tags when Lazy
 loads it. Use `functions.keymaps` to add mappings; see [[Functions]] for

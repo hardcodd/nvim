@@ -1,5 +1,7 @@
 # Operations
 
+Установка, ограничения и проверка комментариев описаны в [[Комментарии]].
+
 The configuration has been tested only on macOS 27.0 (build 26A428) with
 Neovim 0.12.5. Other operating systems have not been tested.
 
@@ -19,6 +21,10 @@ and `paired-tags.nvim` download automatically. Opening a supported file
 downloads and builds a missing parser in the background, which needs network
 access. After installation, run `:checkhealth telescope` and
 `:checkhealth nvim-treesitter`.
+
+`Comment.nvim`, `nvim-ts-context-commentstring` и `todo-comments.nvim` также
+устанавливаются при первом запуске. Для поиска пометок через `:TodoTelescope`
+нужен `rg`; подробности в [[Комментарии]].
 
 ## Verification
 

@@ -35,6 +35,7 @@ map.n("<leader>ff", map.cmd("Telescope find_files"), "Find files")
 map.n("<leader>fg", map.cmd("Telescope live_grep"), "Find text")
 map.n("<leader>fb", map.cmd("Telescope buffers"), "Find buffers")
 map.n("<leader>fh", map.cmd("Telescope help_tags"), "Find help")
+map.n("<leader>ft", map.cmd("TodoTelescope"), "Find TODO comments")
 
 return {
   telescope = {

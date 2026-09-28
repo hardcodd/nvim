@@ -1,5 +1,8 @@
 # Plugins
 
+Комментирование кода, выбор синтаксиса внутри JSX/Vue и поиск пометок описаны
+в [[Комментарии]].
+
 ## Theme and statusline
 
 `nvim-lualine/lualine.nvim` draws the shared bottom statusline with mode, Git,

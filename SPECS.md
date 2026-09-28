@@ -21,6 +21,28 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
   installs the declared plugins on the first Neovim launch.
 - Configure Telescope with its required `plenary.nvim` dependency and expose
   file, text, buffer, and help search through leader mappings.
+- Use `Comment.nvim` for line and block commenting: `gcc` toggles the current
+  line, `gc` works with motions and Visual selections, and `gbc`/`gb` toggle
+  block comments. Keep ordinary non-comment mappings unchanged.
+- Resolve comment syntax from the active Tree-sitter context through
+  `nvim-ts-context-commentstring`, including JSX/TSX and embedded sections of
+  Vue and HTML when their parsers are available. In Vue, plain `script` content
+  uses JavaScript comments, plain `style` content uses CSS comments, and the
+  surrounding markup tags use HTML comments. Fall back to the buffer's
+  `commentstring` when context cannot be resolved. Do not depend on a delayed
+  cursor-hold update before commenting.
+- Highlight `TODO:` and `FIXME:` inside comments and provide project search
+  through `todo-comments.nvim` and the existing Telescope installation.
+  Avoid a Nerd Font requirement and expose search through `<leader>ft`.
+  Project search requires ripgrep; ordinary commenting must work without it.
+- Detect TODO keywords in HTML comments inside `htmldjango` templates even
+  before the injected HTML parser has finished its asynchronous highlight
+  pass. Do not highlight matching text outside comments.
+- Keep TODO keyword backgrounds at their original Catppuccin palette colors
+  in both Latte and Mocha. Latte labels use light text; Mocha labels use dark
+  text. Recreate these highlights when the editor changes appearance without
+  changing comment detection. The original Latte accents may have less than
+  4.5:1 contrast with light text; their color takes precedence over that ratio.
 - In Telescope Insert and Normal modes, Ctrl+J/K select the next/previous
   result, Ctrl+Shift+J/K scroll the preview down/up, and Ctrl+Shift+H/L scroll
   the preview left/right. Keep these mappings
@@ -322,8 +344,8 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
 - Use English identifiers and comments.
 - Do not add optional native Telescope extensions. The approved Tree-sitter
   integration requires tree-sitter-cli and the compilation tools listed below.
-- Keep the README and knowledge base in English, retaining identifiers,
-  commands, file paths, and plugin names exactly as used by the configuration.
+- Keep knowledge-base prose in Russian, retaining identifiers, commands,
+  file paths, and plugin names exactly as used by the configuration.
 - Exclude operating-system metadata, Neovim logs, the obsolete root Obsidian
   settings directory, and the machine-specific Obsidian workspace layout from
   version control.
@@ -373,9 +395,10 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
 - Inspect the live-typed landing page for balanced tags, two content sections,
   intact nested inline markup, and absence of Tree-sitter parse errors. Add
   focused automated regressions for any tag-editor defects it exposes.
-- `init.lua` loads the dedicated keymaps module, and no key mappings are
-  declared outside `lua/keymaps.lua`. Only `lua/functions/keymaps.lua` invokes
-  the native `vim.keymap.set` registration API.
+- `init.lua` loads the dedicated keymaps module, and configuration-owned key
+  mappings are declared in `lua/keymaps.lua`. Plugin-owned mappings may be
+  registered by their plugins. Only `lua/functions/keymaps.lua` invokes the
+  native `vim.keymap.set` registration API in configuration code.
 - Mapping tests cover callable actions, key sequences, Ex commands, multiple
   modes, buffer scope, option overrides, invalid inputs, and unchanged options.
 - Autocommand tests cover event dispatch, multiple events, groups, group
@@ -392,6 +415,13 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
   values, absent configuration, and changes to configuration between previews.
 - Telescope mappings exist for `<leader>ff`, `<leader>fg`, `<leader>fb`, and
   `<leader>fh`.
+- The comment plugins initialize without errors, preserve comment toggling for
+  simple filetypes, choose JSX/TSX syntax in embedded markup, and expose the
+  configured line/block mappings. `TODO:` and `FIXME:` in actual comments are
+  highlighted, including HTML comments in `htmldjango` before injections have
+  parsed, while matching plain text remains unhighlighted. The Telescope TODO
+  search command is available. Test each keyword label's original background
+  and requested text color in Latte and Mocha, including a theme switch.
 - `<leader>q` uses a confirmed `:qall` command, and `<leader>x` uses a
   confirmed `:bdelete` command.
 - `<leader>w` saves changed buffer contents to the current file and clears its

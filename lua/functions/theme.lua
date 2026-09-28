@@ -6,6 +6,48 @@ local generation = 0
 local pending = false
 local active = false
 
+--- Calculate sRGB luminance to distinguish light and dark Catppuccin palettes.
+---@param color string Hex RGB color.
+---@return number
+local function luminance(color)
+  ---@param start integer
+  ---@return number
+  local function linear_channel(start)
+    local value = tonumber(color:sub(start, start + 1), 16) / 255
+    return value <= 0.04045 and value / 12.92 or ((value + 0.055) / 1.055) ^ 2.4
+  end
+  return 0.2126 * linear_channel(2)
+    + 0.7152 * linear_channel(4) + 0.0722 * linear_channel(6)
+end
+
+--- Rebuild theme highlights so TODO labels follow the active palette.
+---@param colors table<string, string>
+---@return table<string, table<string, string|boolean>>
+function M.highlights(colors)
+  local highlights = {
+    Whitespace = { fg = colors.surface1 },
+    IndentRemainder = { fg = colors.overlay0 },
+    IndentWarning = { bg = colors.surface0 },
+  }
+  local todo_accents = {
+    TODO = colors.sky,
+    FIX = colors.red,
+    HACK = colors.yellow,
+    WARN = colors.yellow,
+    PERF = colors.flamingo,
+    NOTE = colors.teal,
+    TEST = colors.flamingo,
+  }
+  local light_palette = luminance(colors.base) > 0.5
+  for keyword, accent in pairs(todo_accents) do
+    highlights["TodoBg" .. keyword] = {
+      bg = accent, fg = light_palette and "#ffffff" or "#000000", bold = true,
+    }
+    highlights["TodoFg" .. keyword] = { fg = accent }
+  end
+  return highlights
+end
+
 --- Release the appearance timer and invalidate outstanding process callbacks.
 ---@return nil
 function M.stop()
@@ -54,13 +96,7 @@ function M.setup()
     flavour = "auto",
     background = { light = "latte", dark = "mocha" },
     auto_integrations = true,
-    custom_highlights = function(colors)
-      return {
-        Whitespace = { fg = colors.surface1 },
-        IndentRemainder = { fg = colors.overlay0 },
-        IndentWarning = { bg = colors.surface0 },
-      }
-    end,
+    custom_highlights = M.highlights,
   })
   vim.cmd.colorscheme("catppuccin-nvim")
   local group = auto.group("SystemAppearance")
