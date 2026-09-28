@@ -108,6 +108,11 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
 - Maintain an Obsidian knowledge base in `Neovim Knowlage/` with a linked home
   page, architecture overview, plugin inventory, keymap reference, and
   operational notes for this configuration.
+- Keep Tree-sitter HTML tag-name and delimiter highlighting available in
+  deeply nested markup, including HTML injected into template buffers. Raise
+  only the HTML highlights query's default in-progress match limit from 256
+  to 512; preserve caller-specified limits, other language queries, parser
+  trees, and buffer contents. Reapplying the workaround must be harmless.
 
 ## Paired editing
 
@@ -327,6 +332,10 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
 
 - Enable native syntax highlighting as a fallback and Tree-sitter highlighting
   for supported filetypes in normal file buffers.
+- A balanced 40-level HTML fixture retains tag-name and delimiter captures at
+  shallow, middle, deepest, and closing levels after cursor movement. Verify
+  that the HTML query uses the higher default limit, keeps an explicit caller
+  limit and options unchanged, and is wrapped only once.
 - Install missing language parsers asynchronously on FileType, using Neovim's
   filetype-to-language mapping. Do not download the entire parser catalogue.
 - Share a pending installation between buffers and attach highlighting after

@@ -12,3 +12,4 @@ directory.
 - [[Appearance]] — theme, statusline, and macOS appearance synchronization.
 - [[Keymaps]] — configured key mappings.
 - [[Operations]] — installation, verification, and maintenance.
+- [[Подсветка HTML]] — цвета тегов при глубокой вложенности и их проверка.

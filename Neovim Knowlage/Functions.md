@@ -26,6 +26,9 @@ Requiring a module does not configure its plugin. The plugin manager calls
 the setup function after loading the dependency. The former
 `lua/config/treesitter.lua` moved to `lua/functions/treesitter.lua`.
 
+`functions.treesitter.configure_html_highlights()` настраивает предел
+запроса подсветки HTML; подробности в [[Подсветка HTML]].
+
 ## Adding a mapping
 
 `lua/keymaps.lua` already requires `map`, `files`, and `diagnostics` at the top.

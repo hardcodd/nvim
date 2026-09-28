@@ -49,6 +49,9 @@ nvim --headless -i NONE -n '+luafile tests/theme_integration.lua' +qa
 nvim --headless -i NONE -n '+lua local ok, err = pcall(dofile, "tests/statusline_integration.lua"); if not ok then print(err); vim.cmd("cquit") end' +qa!
 ```
 
+Проверка подсветки глубоко вложенных HTML-тегов и необходимое окружение
+описаны в [[Подсветка HTML]].
+
 The first test needs isolated data because it creates a stub `lazy.nvim`
 there. Tree-sitter tests model successful and failed installation, concurrent
 buffers, filetype changes, and a buffer closing during installation. Mapping

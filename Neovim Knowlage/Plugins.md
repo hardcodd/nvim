@@ -42,6 +42,9 @@ HTML embedded in Markdown. The language parser must be installed; embedded
 HTML also needs the `html` parser. Without a parser, ordinary tag editing
 still works, but automatic tag actions do not run.
 
+Обход ограничения запроса подсветки глубоко вложенного HTML описан в
+[[Подсветка HTML]]. Он не меняет сопоставление тегов в `paired-tags.nvim`.
+
 Typing `>` after an opener inserts a closer if one is missing. This completes
 before the next key, so a fast `Enter` immediately after the opener creates
 a line between the pair. Empty XML elements and HTML void elements are not
