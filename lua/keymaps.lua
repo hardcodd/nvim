@@ -1,6 +1,11 @@
 local map = require("functions.keymaps")
 local files = require("functions.files")
 local diagnostics = require("functions.diagnostics")
+local emmet = require("functions.emmet")
+
+-- Completion and snippet fields
+map.set({ "i", "s" }, "<Tab>", emmet.tab, "Accept completion, expand Emmet or jump forward", { expr = true })
+map.set({ "i", "s" }, "<S-Tab>", emmet.backtab, "Jump to previous snippet field", { expr = true })
 
 -- Search
 map.n("<Esc>", map.cmd("nohlsearch"), "Clear search highlight")
@@ -19,6 +24,7 @@ map.i("<C-S-k>", "<Up>", "Move up one line")
 map.i("<C-S-l>", "<C-Right>", "Move forward one word")
 
 -- Diagnostics
+map.n("<leader>d", diagnostics.show, "Show diagnostic at cursor")
 map.n("[d", diagnostics.previous, "Previous diagnostic")
 map.n("]d", diagnostics.next, "Next diagnostic")
 

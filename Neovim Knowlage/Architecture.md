@@ -34,6 +34,11 @@ then loads the configuration's key mappings.
   Neovim's indent scripts, without overriding project indent widths.
 - `lua/keymaps.lua` — configuration mappings. `>` and `Enter` tag mappings
   belong to `paired-tags.nvim`.
+- `after/lsp/` — отдельные переопределения серверов поверх `nvim-lspconfig`.
+  `lua/config/lsp.lua` хранит список установки и включения, а
+  `lua/config/lint.lua` — инструменты и типы файлов линтеров. Настройку
+  выполняют `functions.lsp` и `functions.lint` при загрузке
+  `lua/plugins/languages.lua`; подробности в [[LanguageServers]].
 - `lua/functions/keymaps.lua` — the mapping interface.
 - `lua/autocmds.lua` — base autocommands. `functions.autocmds` is their
   registration interface; plugins register their own autocommands.

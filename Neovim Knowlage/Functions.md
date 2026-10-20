@@ -14,7 +14,10 @@ Paired-tag handlers live in the separate `paired-tags.nvim` plugin; see
 | `functions.keymaps` | Define mappings and wrap commands. |
 | `functions.autocmds` | Create groups and register autocommands. |
 | `functions.files` | Open or reuse the file browser with `open()`. |
-| `functions.diagnostics` | Move between diagnostics with `previous()` and `next()`. |
+| `functions.diagnostics` | Переходы по диагностике через `previous()` и `next()`; сообщение у курсора через `show()`. |
+| `functions.lsp` | Настройка серверов через `setup()`; дополнение и навигация через `attach(event)`. |
+| `functions.emmet` | Выбор действия `Tab`/`Shift+Tab`, асинхронное разворачивание сокращений через Emmet LSP и встроенные сниппеты; изменённый буфер не получает запоздавший результат. |
+| `functions.lint` | Проверка разметки через `run(event)` и настройка инструментов/событий через `setup()`. |
 | `functions.editor` | Highlight yanked text, restore cursor position, display indent guides, and set filetype indentation. |
 | `functions.treesitter` | Configure highlighting and automatic parser installation with `setup()`; configure Vue, TSX, and JSX indentation after standard scripts with `configure_indentation(buf)`. |
 | `functions.plugins` | Configure Telescope, preview scrolling and tab width, and `nvim-autopairs` through `telescope()`, `telescope_preview_tabs()`, and `autopairs()`. |

@@ -41,12 +41,24 @@ past an existing pair, and `Backspace` inside an empty pair removes both
 characters. Tags need no separate user mapping; see
 [[Plugins#Paired symbols and tags]] for insertion and renaming behavior.
 
+## Emmet и сниппеты
+
+В Insert/Select mode `Tab` принимает выбранную подсказку, переходит к
+следующему полю сниппета или разворачивает Emmet; без подходящего действия
+вставляет обычный отступ. `Shift+Tab` переходит к предыдущему полю.
+Примеры и ограничения — [[LanguageServers#Emmet]].
+
 ## Diagnostics
 
 | Key | Action |
 | --- | --- |
 | `[d` | Go to the previous diagnostic. |
 | `]d` | Go to the next diagnostic. |
+| `Space d` | Показать сообщение диагностики у курсора. |
+
+В буфере с LSP `gd` переходит к определению. Стандартные `K`, `grr`, `grn`
+и `gra` дают справку, ссылки, переименование и действия; дополнение
+и ограничения серверов описаны в [[LanguageServers]].
 
 ## File browser
 

@@ -91,6 +91,51 @@ Parser installation errors are available in `:TSLog`. To retry, run
 reopen the buffer. Use `:TSInstall! python` to repair an incomplete install.
 Installed parsers work offline; `:Inspect` checks highlighting at the cursor.
 
+## Языковые серверы
+
+Установка, отдельные настройки серверов, меню дополнения и ограничения
+HTML/Django, React и Vue описаны в [[LanguageServers]]. Node.js с npm и
+Python 3 с `venv`/`pip` должны быть доступны в окружении Neovim.
+
+`tests/lsp_spec.lua` проверяет маршрутизацию, буферные клавиши и повторную
+настройку без установки инструментов:
+
+```sh
+rtk nvim --headless -u NONE -i NONE -n -l tests/lsp_spec.lua
+```
+
+`tests/languages_integration.lua` использует установленный набор Mason и
+реальные серверы. Он создаёт и перезаписывает фикстуры только в указанном
+одноразовом каталоге: там должны быть npm-зависимости `vue`, `@types/react`,
+`eslint` и `typescript`. Не передавайте каталог настоящего проекта.
+
+```sh
+test_root=$(rtk mktemp -d)
+rtk env npm_config_cache="$test_root/npm-cache" npm install --prefix "$test_root" --no-audit --no-fund --ignore-scripts vue@3 @types/react@19 eslint@9 typescript@5
+rtk env NVIM_WEB_TEST_ROOT="$test_root" XDG_STATE_HOME="$test_root/state" XDG_CACHE_HOME="$test_root/cache" nvim --headless -i NONE -n '+lua local ok, err = pcall(dofile, "tests/languages_integration.lua"); if not ok then print(err); vim.cmd("cquit") end' +qa!
+```
+
+Проверяются диагностика и её исчезновение после исправления HTML,
+Django-разметки, JSX/TSX, правил ESLint и обеих частей Vue-компонента,
+проектные настройки линтеров, HTML-дополнение, окно сообщения и парный `Enter` при подключённом
+LSP. Это headless-проверка; удобство меню и оформления в своём терминале
+проверяется отдельно. Версии тестовых зависимостей при повторной установке
+в пределах указанных основных версий могут измениться.
+
+Проверка Emmet без установки инструментов и реальный ввод с установленным
+`emmet-language-server`:
+
+```sh
+rtk nvim --headless -u NONE -i NONE -n -l tests/emmet_spec.lua
+rtk nvim --headless -i NONE -n '+luafile tests/emmet_integration.lua'
+```
+
+Вторая проверка сама завершает Neovim. Она проверяет сокращения в HTML,
+Django, JSX/TSX, Vue и CSS, отступы, поля сниппетов, принятие подсказки,
+парный `Enter` и защиту от запоздавшего ответа после правки. Она использует
+одноразовые буферы и отключает ненужный ей диагностический `vue_ls`.
+Внешний вид меню и передачу `Shift+Tab` проверьте в своём терминале.
+
 ## System clipboard
 
 `init.lua` sets `clipboard=unnamedplus`: ordinary `y`/`yy` copies to the

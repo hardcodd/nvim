@@ -16,6 +16,12 @@ See [[Appearance]] for settings and limits.
 
 ## Plugin manager
 
+Серверы управляются `mason.nvim`, `mason-lspconfig.nvim` и `nvim-lspconfig`.
+`nvim-lint` выводит диагностику HTMLHint и djLint, а
+`mason-tool-installer.nvim` устанавливает эти две программы. Объявления
+находятся в `lua/plugins/languages.lua`, версии плагинов — в `lazy-lock.json`.
+Список серверов, отдельные настройки и ограничения — в [[LanguageServers]].
+
 `folke/lazy.nvim` bootstraps into
 `stdpath("data") .. "/lazy/lazy.nvim"` if missing. It then installs missing
 plugins on Neovim's first launch.

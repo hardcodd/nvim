@@ -436,3 +436,22 @@ Provide a small, portable Neovim configuration compatible with Neovim 0.12.5.
   requirements, and a link to the detailed operational guide.
 - `.gitignore` excludes local-only files without excluding the vault notes or
   its shareable Obsidian settings.
+
+## Language services
+
+- Mason installs and enables only the servers declared in `lua/config/lsp.lua`;
+  each server can override the `nvim-lspconfig` defaults in `after/lsp/`.
+- HTML and Django templates share HTML completion but use separate markup
+  linters. Django uses the djLint Django profile. HTML formatting is disabled.
+- React/JavaScript/TypeScript use `vtsls`; Vue 3 also uses `vue_ls` and the
+  Vue TypeScript plugin. ESLint uses project dependencies and rules. No
+  automatic formatting, fixes, or project dependency changes are configured.
+- TypeScript attaches only to buffers with file names, retaining upstream
+  project/Deno detection and incremental synchronization for those files.
+- Native completion and diagnostic navigation preserve tag pairing and Enter.
+  Installed program versions are managed separately from pinned Lua plugins.
+- Emmet uses the Mason-managed `emmet_language_server` and native snippets for
+  HTML/Django, JSX/TSX, Vue and stylesheets. Tab accepts selected completion,
+  advances snippet fields, expands abbreviations, then falls back to indentation;
+  Shift-Tab moves backwards through fields. Late responses must not overwrite
+  changed text or a different cursor/buffer. Enter retains paired-tag behavior.
